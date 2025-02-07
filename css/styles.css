@@ -1,0 +1,91 @@
+/* Define custom colors in :root */
+:root {
+    --primary-color: #385182; /* Main color */
+    --primary-dark: #2a3b6b;  /* Darker shade for hover states */
+    --text-color: #385182;    /* Text color */
+    --border-color: #385182;  /* Border color */
+    --secondary-color: #6285CA; /* Secondary color */
+    --text-secondary: #6285CA;
+}
+
+/* Apply custom colors to Tailwind-like utility classes */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.text-primary {
+    color: var(--text-color);
+}
+
+.border-primary {
+    border-color: var(--border-color);
+}
+
+.hover\:bg-primary-dark:hover {
+    background-color: var(--primary-dark);
+}
+
+.hover\:text-primary:hover {
+    color: var(--text-color);
+}
+  
+.hover\:border-primary:hover {
+    border-color: var(--border-color);
+}
+/* Apply Fredoka font to the heading */
+.font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Custom color for the word "good" */
+.text-custom-blue {
+    color: #6285CA;
+}
+
+section{
+    padding: 60px 0;
+  }
+.services_section{
+   background-color: #f5f6f9;
+}
+ /* Add Fredoka font */
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+ .services_section{
+    background-color: #f5f6f9;
+ }
+ .font-fredoka {
+   font-family: 'Fredoka', sans-serif;
+ }
+
+ .card {
+   transition: all 0.3s ease;
+   background-color: #38518214;
+ }
+
+ .card:hover {
+   background-color: #385182;
+   border-bottom-left-radius: 50%;
+ }
+
+ .card:hover .peginetion {
+   background-color: #fff;
+ }
+
+ .card:hover .peginetion i {
+   color: #385182;
+ }
+
+ .card:hover h2,
+ .card:hover p {
+   color: #fff;
+ }
+
+ .card:hover img {
+   border-bottom-left-radius: 50%;
+ }
+

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo770 1.png" />
+
+    <title>Dhameliya Kidney Hospital</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fredoka Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Apply Fredoka font to the heading */
+        .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Custom color for the word "good" */
+        .text-custom-blue {
+            color: #6285CA;
+        }
+        .outer-shadow {
+  box-shadow: 0 0 5px rgba(58, 55, 55, 0.2);
+}
+    </style>
+</head>
+<body class="m-0 font-sans antialiased font-fredoka ">
+
+  <header id="header" class="py-8 bg-[#E6E9EF] relative">
+    <div class="container mx-auto flex items-center justify-between px-4">
+        <!-- Logo and Hospital Name -->
+        <div class="flex items-center">
+            <a href="javascript:void(0)" class="flex items-center">
+                <img src="assets/images/logo770 1.png" alt="Logo" class="mr-4">
+                <img src="assets/images/Dhameliya Kidney Hospital.png" alt="Dhameliya Kidney Hospital" class="h-12">
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="navbar" class="navbar">
+            <ul class="flex space-x-4 list-none p-0 m-0 items-center">
+                <li><a href="index.html" class="nav-link scrollto active px-4 py-2 text-primary hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="About.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">About</a></li>
+                <li class="dropdown relative">
+                    <a href="Medical_services.html" class="flex items-center px-4 py-2 text-primary hover:text-primary transition duration-300">
+                        <span>Medical services</span>
+                        <i class="ri-arrow-down-s-line ml-1"></i>
+                    </a>
+                    <ul class="dropdown-menu absolute left-0 top-full mt-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                        <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 1</a></li>
+                        <li class="dropdown relative">
+                            <a href="javascript:void(0)" class="flex items-center px-5 py-2 text-primary hover:bg-gray-200">
+                                <span>Service 2</span>
+                                <i class="ri-arrow-right-s-line ml-auto"></i>
+                            </a>
+                            <ul class="dropdown-menu absolute left-full top-0 ml-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                                <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 1</a></li>
+                                <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 2</a></li>
+                                <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 3</a></li>
+                                <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 4</a></li>
+                                <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 3</a></li>
+                        <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 4</a></li>
+                        <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="careear.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Career</a></li>
+                <li><a href="News.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">News</a></li>
+                <li><a href="Contactus.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+         
+         <div class="flex items-center">   
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1499 15.9751C15.0624 15.9626 14.9499 15.9626 14.8499 15.9751C12.6499 15.9001 10.8999 14.1001 10.8999 11.8876C10.8999 9.6251 12.7249 7.7876 14.9999 7.7876C17.2624 7.7876 19.0999 9.6251 19.0999 11.8876C19.0874 14.1001 17.3499 15.9001 15.1499 15.9751Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23.4252 24.2252C21.2002 26.2627 18.2502 27.5002 15.0002 27.5002C11.7502 27.5002 8.8002 26.2627 6.5752 24.2252C6.7002 23.0502 7.4502 21.9002 8.7877 21.0002C12.2127 18.7252 17.8127 18.7252 21.2127 21.0002C22.5502 21.9002 23.3002 23.0502 23.4252 24.2252Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+    
+     
+        <!-- Make Appointment Button -->
+        <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-6 py-2 ml-6 hover:bg-primary-dark transition duration-300 hidden lg:inline-block">
+            Make Appointment
+        </a>
+         </div>
+        <!-- Mobile Nav Toggle -->
+        <i class="ri-menu-fill text-primary text-2xl cursor-pointer lg:hidden"></i>
+    </div>
+
+    <!-- Pseudo-element to extend the header background -->
+    <div class="header-bg-extension"></div>
+
+    <!-- Floating Image on the Left Side -->
+    <img src="assets/images/helthkit.png" alt="Floating Image" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+
+    <!-- Small Round Shape -->
+    <div class="absolute bg-[#FA7E8E] rounded-full h-4 w-4" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;"></div>
+
+    <!-- Floating Image on the Right Side -->
+    <img src="assets/images/kidney.png" alt="Floating Image" class="absolute right-20 top-32   transform  -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+
+    <!-- Small Blue Dot -->
+    <div class="absolute bg-blue-500 rounded-full h-4 w-4" style="top: 50%; right: 0; transform: translate(-50%, -50%); z-index: 10;"></div>
+</header>
+
+<section class="relative">
+    <!-- Half Background Color -->
+    <div class="absolute inset-0 bg-[#E6E9EF]" style="height: 50%; z-index: -1;"></div>
+
+    <!-- Hero Section -->
+    <div class="relative mx-auto overflow-hidden" style="max-width: 1200px; height: 200px; border-radius: 100px;">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('./assets/images/heroimgsec.png'); background-position: center 35%; border-radius: 100px;">
+        </div>
+        <!-- Light Blue Overlay (Now Rounded) -->
+        <div class="absolute inset-0 bg-blue-900 opacity-50" style="border-radius: 100px;"></div>
+        <!-- Content -->
+        <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-white">
+            <h1 class="text-4xl  font-medium mb-4">About Us</h1>
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="hover:underline ">Home</a>
+                <span>•</span>
+                <span class="">About Us</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto relative">
+      <!-- Floating Images -->
+      <div class="absolute -left-44 top-0 rotate-[8deg] w-96 overflow-hidden p-0">
+        <img
+          src="assets/images/aboutsec.png"
+          alt="Doctor consultation"
+          class="w-full h-full rounded-lg shadow-lg object-cover p-0"
+        />
+      </div>
+
+      <div class="absolute -right-40 bottom-0 rotate-[-8deg] w-80  overflow-hidden">
+        <img
+          src="assets/images/aboutsec.png"
+          alt="Doctor consultation"
+          class="w-full h-full rounded-lg shadow-lg object-cover p-0"
+        />
+      </div>
+
+      <!-- Curved Arrow -->
+      <div class="absolute right-0 top-16 transform -translate-y-1/2">
+       <img src="assets/images/sidiline.png" alt="">
+      </div>
+
+      <!-- Content -->
+      <div class="rounded-3xl backdrop-blur-[79px] p-8 md:p-12 mx-auto" style="background: linear-gradient(151.2deg, #E8EDF7 3.71%, #FFFFFF 82.26%); max-width: 600px; box-shadow: 21px 52px 79px 0px #3850811A;">
+        <div class="text-center mb-8">
+          <p class="text-primary  font-medium mb-4">A B O U T &nbsp; H O S P I T A L</p>
+          <h2 class="text-2xl md:text-3xl  font-medium text-slate-800 mb-6">
+            Super <span class="text-primary"> Speciality </span> Hospital<br />
+            Of South Gujarat.
+          </h2>
+          <p class="text-[#888888] ">
+            Dhameliya Kidney Hospital has born out of the need for a good center which catered to patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology, world class expertise and outstanding personalized care. With time it has become best kidney hospital in SURAT. Hospital with all facilities under one roof provides for greater efficiency in meeting the overall needs of a patient.
+          </p>
+          <br>
+          <p class="text-[#888888]">patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology</p>
+          <br>
+          <button class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white hover:bg-primary-dark transition-colors" style="border-radius: 8px;">
+            Read More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      
+        <!-- Profile Icon -->
+        <div class="absolute right-0 top-60">
+          <div class="w-full flex items-center  justify-center text-white">
+          <img src="assets/images/dricon.png" alt="">
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="" style="background-color:#F5F6F9 !important;">
+        <div class="container w-full mx-auto px-4 py-16 md:py-24 z-10">
+
+       
+        <div class="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+          <div class="space-y-6">
+            <span class="text-[#6285CA] text-xl  letter-spacing-4 font-medium">A B O U T &nbsp; D O C T O R</span>
+            <h1 class="text-3xl md:text-4xl text-[#032342]  font-weight-[500] lg:text-5xl font-medium text-navy-900  leading-tight">
+              Improving <span class="text-primary "> The Quality </span>Of Your Life Through Better Health.
+            </h1>
+            <div class="space-y-6">
+              <div>
+                <h2 class="text-xl text-[#032342] font-medium mb-2 ">Our support services include:</h2>
+                <p class="text-[#888888] leading-relaxed">
+                  Completed MBBS in 1998 from B.J. Medical College, Ahmedabad. 
+                  Completed M.S. General Surgery in 2003 from Shardaben Hospital, 
+                  Ahmedabad. He was the only student of Gujarat who selected for 
+                  M.C.H study in 2004 and completed that in 2007.
+                </p>
+              </div>
+              <div>
+                <h2 class="text-xl font-medium text-[#032342] mb-2 ">Professional Experience:</h2>
+                <p class="text-[#888888] leading-relaxed mb-4">
+                  He started private practice in Surgical Urology at Surat in 2007 at 
+                  Dhameliya Kidney Hospital. He is also giving his service to the PATEL 
+                  KIDNEY HOSPITAL which is a trust hospital in Surat. He is a visiting 
+                  doctor in many hospitals in Surat (e.g., Mahavir Hospital, BAPS 
+                  Hospital, Unique Hospital, Apple Hospital).
+                </p>
+                <p class="text-[#888888] leading-relaxed">
+                  He has presented papers on laparoscopic radical prostatectomy 
+                  and laparoscopic radical cystectomy at Goa, Mahesana, Patna, 
+                  Mumbai, and Ahmedabad.
+                </p>
+              </div>
+            </div>
+            <div class="hidden lg:block relative">
+              <img src="assets/images/vakiline.png" class=" w-16 h-16 absolute -right-24 z-10 top-0 transform -translate-y-1/2" alt="">
+            </div>
+          </div>
+          <div class="relative">
+            <div class="  overflow-hidden p-0 m-0">
+              <img
+                src="assets/images/abdoctor.png"
+                alt="Doctor's portrait"
+                class="block w-full h-full object-cover p-0 m-0"
+              />
+            </div>
+            <div class="absolute -bottom-6 left-0 transform -translate-x-1/2 bg-white rounded-xl shadow-lg w-72 p-2 flex flex-col items-center justify-start">
+              <div class="flex justify-center mt-2">
+                <img
+                  src="assets/images/profiledr.png"
+                  alt="Doctor profile"
+                  width="48"
+                  height="48"
+                  class="rounded-full"
+                />
+              </div>
+              <div class="text-center mt-2">
+                <h3 class="font-medium text-[#032342]  text-lg">Dr. Arvind B. Dhameliya</h3>
+                <p class="text-sm text-[#888888]">
+                  Consultant Urologist, Laparoscopic <br> Surgeon & Andrologist
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+
+
+      <section class="container mx-auto px-4 py-12">
+        <!-- Heading Section -->
+        <div class="text-center m-0">
+            <h2 class=" text-xl font-medium text-[#6285CA] leading-[18px] tracking-3 uppercase text-muted-foreground mb-2">
+                F a c i l i t y
+            </h2>
+            <h3 class="text-5xl font-medium  text-[#032342] relative">
+                <img src="assets/images/rightlinee.png" alt="" class="inline-block  w-20 h-full mr-56"> <!-- Add your left image here -->
+             <span class="text-center">   Cashless <span class="text-primary"> Facility </span> </span>
+                <img src="assets/images/leftline.png" alt="" class="inline-block h-full w-20   ml-56 "> <!-- Add your right image here -->
+            </h3>
+        </div>
+    
+        <div class="flex justify-center items-center mt-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+              <!-- First Card (Curved Top-Right Corner) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 124.87px 16px 16px 16px; background-color: #6285CA26;">
+                  <img src="assets/images/image 204 (1).png" alt="Liberty Specialty Markets" class="h-full w-auto object-contain" />
+              </div>
+      
+              <!-- Second Card (Curved Bottom-Right Corner) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 16px 16px 124.87px 16px; background-color: #6285CA26;">
+                  <img src="assets/images/image 204 (2).png" alt="Royal Sundaram" class="h-full w-auto object-contain" />
+              </div>
+      
+              <!-- Third Card (Curved Top-Left Corner) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 16px 124.87px 16px 16px; background-color: #6285CA26;">
+                  <img src="assets/images/image 204 (3).png" alt="Health India" class="h-full w-auto object-contain" />
+              </div>
+      
+              <!-- Fourth Card (Curved Top-Left Corner, Same as Third Card) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 16px 124.87px 16px 16px; background-color: #6285CA26;">
+                  <img src="assets/images/image 204 (4).png" alt="Kotak General Insurance" class="h-full w-auto object-contain z-10" />
+              </div>
+      
+              <!-- Fifth Card (Curved Bottom-Left Corner) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 16px 16px 16px 124.87px; background-color: #6285CA26;">
+                  <img src="assets/images/Screenshot 2025-01-28 002656.png" alt="Medi Assist" class="h-full w-auto object-contain" />
+              </div>
+      
+              <!-- Sixth Card (Curved Top-Right Corner) -->
+              <div class="rounded-lg p-10 flex items-center justify-center" style="width: 380px; height: 248.93px; border-radius: 124.87px 16px 16px 16px; background-color: #6285CA26;">
+                  <img src="assets/images/image 204.png" alt="United Healthcare" class="h-full w-auto object-contain" />
+              </div>
+          </div>
+      </div>
+    
+        <!-- View More Button -->
+        <div class="text-center mb-8">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+                View More
+            </button>
+        </div>
+    
+        <!-- Spacing between Cards and Cashless Section -->
+        <div class="mt-12"></div> <!-- Added margin-top (mt-12) for spacing -->
+    
+        <!-- Cashless Card -->
+        <div class="text-white p-8 rounded-2xl relative overflow-hidden max-w-3xl mx-auto" 
+    style="background: #061422; 
+           background-image: linear-gradient(215.72deg, #95BDFF 10.32%, #FFFFFF 79.08%), url('assets/images/your-image.jpg'); 
+           background-blend-mode: overlay, normal; 
+           background-size: cover; 
+           background-position: center;">
+   <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+       <div>
+           <h3 class="text-4xl font-medium  mb-2">Cashless Facility Available</h3>
+           <br>
+           <button class="inline-flex items-center bg-white text-primary justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-12 px-4 py-2 gap-2">
+             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateY(3px);">
+                 <g filter="url(#filter0_d_2_1924)">
+                     <circle cx="16" cy="12" r="12" fill="#032342"/>
+                 </g>
+                 <rect width="14" height="14" transform="translate(9 5)" fill="#032342"/>
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.815 7.91667C12.85 8.43583 12.9375 8.94333 13.0775 9.4275L12.3775 10.1275C12.1383 9.4275 11.9867 8.68667 11.9342 7.91667H12.815ZM18.5667 14.9283C19.0625 15.0683 19.57 15.1558 20.0833 15.1908V16.06C19.3133 16.0075 18.5725 15.8558 17.8667 15.6225L18.5667 14.9283ZM13.375 6.75H11.3333C11.0125 6.75 10.75 7.0125 10.75 7.33333C10.75 12.8108 15.1892 17.25 20.6667 17.25C20.9875 17.25 21.25 16.9875 21.25 16.6667V14.6308C21.25 14.31 20.9875 14.0475 20.6667 14.0475C19.9433 14.0475 19.2375 13.9308 18.5842 13.715C18.5258 13.6917 18.4617 13.6858 18.4033 13.6858C18.2517 13.6858 18.1058 13.7442 17.9892 13.855L16.7058 15.1383C15.055 14.2925 13.7017 12.945 12.8617 11.2942L14.145 10.0108C14.3083 9.8475 14.355 9.62 14.2908 9.41583C14.075 8.7625 13.9583 8.0625 13.9583 7.33333C13.9583 7.0125 13.6958 6.75 13.375 6.75Z" fill="white"/>
+                 <defs>
+                     <filter id="filter0_d_2_1924" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                         <feOffset dy="4"/>
+                         <feGaussianBlur stdDeviation="2"/>
+                         <feComposite in2="hardAlpha" operator="out"/>
+                         <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+                         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_1924"/>
+                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_1924" result="shape"/>
+                     </filter>
+                 </defs>
+             </svg>
+             +91 201 2490001
+         </button>
+       </div>
+       <div class="relative z-10"> 
+           <img src="assets/images/cardd.png" alt="" class="object-cover">
+       </div>
+   </div>
+</div>
+
+    </section>
+    <section class=" px-4 py-12" style="background-color: #F5F6F9;">
+      <div class="max-w-7xl mx-auto px-4 w-full py-16 sm:px-6 lg:px-8">
+          <div class="space-y-12">
+              <div class="sm:flex sm:items-center sm:justify-between">
+                  <div>
+                      <h3 class="text-[#6285CA] text-lg font-medium  tracking-wide uppercase">
+                          O F F I C E R
+                      </h3>
+                      <h2 class="text-4xl font-weight-[500] font-medium tracking-tight ">
+                          <span class="text-navy-900">Medical</span>
+                          <span class="text-[#385182]">Officers</span>
+                      </h2>
+                  </div>
+                  <p class="text-gray-500 max-w-3xl sm:ml-6">
+                      Our medical officers are dedicated professionals with exceptional expertise, committed to providing quality healthcare and assisting with all medical inquiries efficiently.
+                  </p>
+              </div>
+  
+              <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div class="relative rounded-2xl p-4 hover:shadow-lg transition-shadow duration-300"
+                      style="background: linear-gradient(to bottom, #E6E9EF, #DFEAFF, #F1F6FF);">
+                      <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4">
+                          <img src="assets/images/drr1.png" alt="Dr. Malvika Lapani" width="400" height="300"
+                              class="object-cover w-full h-full" />
+                      </div>
+                      <div class="space-y-1">
+                          <h3 class="text-xl font-medium  text-gray-900">Dr. Malvika Lapani</h3>
+                          <p class="text-gray-500 ">Medical Officer</p>
+                      </div>
+                  </div>
+  
+                  <div class="relative rounded-2xl p-4 hover:shadow-lg transition-shadow duration-300"
+                      style="background: linear-gradient(to bottom, #E6E9EF, #DFEAFF, #F1F6FF);">
+                      <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4">
+                          <img src="assets/images/drr2.png" alt="Dr. Malvika Lapani" width="400" height="300"
+                              class="object-cover w-full h-full" />
+                      </div>
+                      <div class="space-y-1">
+                          <h3 class="text-xl  font-medium text-gray-900">Dr. Malvika Lapani</h3>
+                          <p class="text-gray-500 ">Medical Officer</p>
+                      </div>
+                  </div>
+  
+                  <div class="relative rounded-2xl p-4 hover:shadow-lg transition-shadow duration-300"
+                      style="background: linear-gradient(to bottom, #E6E9EF, #DFEAFF, #F1F6FF);">
+                      <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4">
+                          <img src="assets/images/dr3.png" alt="Dr. Malvika Lapani" width="400" height="300"
+                              class="object-cover w-full h-full" />
+                      </div>
+                      <div class="space-y-1">
+                          <h3 class="text-xl font-medium  text-gray-900">Dr. Malvika Lapani</h3>
+                          <p class="text-gray-500 ">Medical Officer</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+      
+  <section class="py-12">
+    <div class="text-center mb-12" style="margin-bottom: 130px;">
+      <h2 class="text-lg font-medium  text-[#6285CA] uppercase">G a l l e r y</h2>
+      <h1 class="mt-2 text-4xl  font-medium text-gray-800">See Our <span class="text-[#385182]">Gallery</span></h1>
+    </div>
+  
+    <!-- Gallery Grid -->
+    <div class="mt-16 grid container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+      <!-- Branch 1 -->
+      <div class="overflow-visible relative group">
+        <!-- Rectangle for Branch 1 -->
+        <div class="absolute z-0 rounded-xl" style="width: 342px; height: 334px; top: -60px; left: -150px; background: linear-gradient(180deg, rgba(9, 48, 125, 0) -49.7%, rgba(56, 81, 130, 0.5) 100%);"></div>
+        <!-- Image and text -->
+        <div class="relative z-10">
+          <div class="overflow-hidden rounded-xl">
+            <img src="assets/images/Rectangle 4360.png" alt="Branch 1: Lal Darwaja" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" style="height: 334px; width: 270px;">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-medium  text-2xl text-black mr-12">Branch 1: Lal Darwaja</h3>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Branch 2 -->
+      <div class="overflow-hidden relative group" style="margin-top: 130px;">
+        <div class="overflow-hidden rounded-xl">
+          <img src="assets/images/Rectangle 4373.png" alt="Branch 2: Udhna Darwaja" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" style="height: 334px; width: 270px;">
+        </div>
+        <div class="text-center">
+          <h3 class="font-medium  text-2xl text-black mt-4 mr-12">Branch 2: Udhna Darwaja</h3>
+        </div>
+      </div>
+  
+      <!-- Branch 3 -->
+      <div class="overflow-hidden relative group">
+        <div class="overflow-hidden rounded-xl">
+          <img src="assets/images/Rectangle 4372.png" alt="Branch 3: Adajan" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" style="height: 334px; width: 270px;">
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="font-medium  text-2xl text-black mr-12">Branch 3: Adajan</h3>
+        </div>
+      </div>
+  
+      <!-- Branch 4 -->
+      <div class="overflow-visible relative group" style="margin-top: 130px;">
+        <!-- Rectangle for Branch 4 -->
+        <div class="absolute z-0 rounded-xl" style="width: 342px; height: 334px; top: -60px; right: -72px; background: linear-gradient(180deg, rgba(9, 48, 125, 0) -49.7%, rgba(56, 81, 130, 0.5) 100%);"></div>
+        <!-- Image and text -->
+        <div class="relative z-10">
+          <div class="overflow-hidden rounded-xl">
+            <img src="assets/images/Rectangle 4374.png" alt="Branch 4: Amroli" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" style="height: 334px; width: 270px;">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-medium  text-2xl text-black mr-12">Branch 4: Amroli</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="w-full py-24 flex flex-col items-center justify-center">
+    <div class="container p-10 bg-cover bg-center text-center rounded-[18px] bg-[#385182]" style="background-image: url('assets/images/linenews.png');">
+      <div class="newsletter_content">
+        <h2 class="text-white text-5xl font-medium mb-5">Newsletter</h2>
+        <span class="text-white text-2xl font-medium">Get Smarter About No-Code</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+        </svg>
+        <div class="flex items-center justify-center my-4">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+          </svg>
+          <p class="text-[#AFB9CD] text-base mx-2" style="color: #AFB9CD;">
+            The best No-Code tips & tricks, for webflow & Framer developers from <br>experts to beginner. Join our 3k community by subscribing
+          </p>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="flex justify-center mt-4">
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            class="text-white text-lg px-3 py-2 rounded-[10px] outline-none border border-[#8f9db8] bg-[#445b89] placeholder:text-white"
+          />
+          <a
+            href="#subscribe"
+            class="subscribe_btn inline-block border border-[#032342] text-[#385182] bg-white rounded-[12px] px-6 py-3 text-lg font-medium transition duration-300 hover:bg-[#6285ca] hover:text-white ml-3"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+      <footer id="footer" class="bg-[#032342] text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="f_left">
+                        <h4 class="text-4xl font-medium mb-5">Dhameliya Kidney Hospital</h4>
+                        <p class="text-lg mb-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim laboriosam eius voluptate ipsam, error fugit praesentium aut modi. Rerum obcaecati deleniti laboriosam nesciunt nisi
+                        </p>
+                        <div class="flex space-x-5">
+                            <i class="ri-facebook-circle-fill text-2xl"></i>
+                            <i class="ri-instagram-fill text-2xl"></i>
+                            <i class="ri-linkedin-box-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Middle Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="mid_footer">
+                        <h5 class="text-2xl font-medium mb-8">Get in Touch</h5>
+                        <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                        <p class="text-lg mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur omnis adipisci</p>
+                        <div class="phone pt-4 flex items-center">
+                            <i class="ri-phone-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            <span class="text-lg">+91 261 2490001</span>
+                        </div>
+                        <div class="flex items-center py-4">
+                            <div class="location">
+                                <i class="ri-map-pin-2-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            </div>
+                            <span class="text-lg">402, Aayush Doctor House, Lal Darwaja, Station Road, SURAT 395002-GUJ INDIA</span>
+                        </div>
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Get Direction <i class="ri-arrow-right-line"></i></a>
+                        <br />
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Our Branches <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Right Section -->
+                <div class="col-span-1">
+                    <div class="footerRight">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Medical Services</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="m_services space-y-3">
+                                    <li class="text-lg icon-list">Kidney Stone</li>
+                                    <li class="text-lg icon-list">Prostate</li>
+                                    <li class="text-lg icon-list">Uro Oncology</li>
+                                    <li class="text-lg icon-list">Paediatric Urology</li>
+                                    <li class="text-lg icon-list">Female Urology</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Quick Links</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="q_services space-y-3">
+                                    <li class="text-lg icon-list">Home</li>
+                                    <li class="text-lg icon-list">About Us</li>
+                                    <li class="text-lg icon-list">Medical Services</li>
+                                    <li class="text-lg icon-list">Testimonials</li>
+                                    <li class="text-lg icon-list">Contact Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Line -->
+            <div class="border-t border-white my-10"></div>
+    
+            <!-- Copyright -->
+            <p class="text-center text-xl">Non Copyrighted @ 2022 Designed and uploaded by Dhameliya Kidney Hospital</p>
+        </div>
+    </footer>
+
+
+</body>     
+</html>

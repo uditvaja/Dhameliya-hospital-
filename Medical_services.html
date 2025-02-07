@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo770 1.png" />
+    <title>Dhameliya Kidney Hospital</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fredoka Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Custom CSS -->
+    <style>
+        .font-fredoka { font-family: 'Fredoka', sans-serif; }
+        .text-custom-blue { color: #6285CA; }
+        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); }
+        .icon-list {
+    position: relative;
+    padding-left: 24px; /* Adjust based on icon size */
+}
+
+.icon-list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    </style>
+</head>
+<body class="m-0 font-sans antialiased font-fredoka  ">
+    <!-- Header -->
+    <header id="header" class="py-8 bg-[#E6E9EF] relative">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Logo and Hospital Name -->
+          <div class="flex items-center">
+              <a href="javascript:void(0)" class="flex items-center">
+                  <img src="assets/images/logo770 1.png" alt="Logo" class="mr-4">
+                  <img src="assets/images/Dhameliya Kidney Hospital.png" alt="Dhameliya Kidney Hospital" class="h-12">
+              </a>
+          </div>
+  
+          <!-- Navigation Menu -->
+          <nav id="navbar" class="navbar">
+              <ul class="flex space-x-4 list-none p-0 m-0 items-center">
+                  <li><a href="index.html" class="nav-link scrollto active px-4 py-2 text-primary hover:text-primary transition duration-300">Home</a></li>
+                  <li><a href="About.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">About</a></li>
+                  <li class="dropdown relative">
+                      <a href="Medical_services.html" class="flex items-center px-4 py-2 text-primary hover:text-primary transition duration-300">
+                          <span>Medical services</span>
+                          <i class="ri-arrow-down-s-line ml-1"></i>
+                      </a>
+                      <ul class="dropdown-menu absolute left-0 top-full mt-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 1</a></li>
+                          <li class="dropdown relative">
+                              <a href="javascript:void(0)" class="flex items-center px-5 py-2 text-primary hover:bg-gray-200">
+                                  <span>Service 2</span>
+                                  <i class="ri-arrow-right-s-line ml-auto"></i>
+                              </a>
+                              <ul class="dropdown-menu absolute left-full top-0 ml-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 1</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 2</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 3</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 4</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 3</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 4</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="careear.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Career</a></li>
+                  <li><a href="News.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">News</a></li>
+                  <li><a href="Contactus.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Contact</a></li>
+              </ul>
+          </nav>
+           
+           <div class="flex items-center">   
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.1499 15.9751C15.0624 15.9626 14.9499 15.9626 14.8499 15.9751C12.6499 15.9001 10.8999 14.1001 10.8999 11.8876C10.8999 9.6251 12.7249 7.7876 14.9999 7.7876C17.2624 7.7876 19.0999 9.6251 19.0999 11.8876C19.0874 14.1001 17.3499 15.9001 15.1499 15.9751Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.4252 24.2252C21.2002 26.2627 18.2502 27.5002 15.0002 27.5002C11.7502 27.5002 8.8002 26.2627 6.5752 24.2252C6.7002 23.0502 7.4502 21.9002 8.7877 21.0002C12.2127 18.7252 17.8127 18.7252 21.2127 21.0002C22.5502 21.9002 23.3002 23.0502 23.4252 24.2252Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      
+       
+          <!-- Make Appointment Button -->
+          <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-6 py-2 ml-6 hover:bg-primary-dark transition duration-300 hidden lg:inline-block">
+              Make Appointment
+          </a>
+           </div>
+          <!-- Mobile Nav Toggle -->
+          <i class="ri-menu-fill text-primary text-2xl cursor-pointer lg:hidden"></i>
+      </div>
+  
+      <!-- Pseudo-element to extend the header background -->
+      <div class="header-bg-extension"></div>
+  
+      <!-- Floating Image on the Left Side -->
+      <img src="assets/images/helthkit.png" alt="Floating Image" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Round Shape -->
+      <div class="absolute bg-[#FA7E8E] rounded-full h-4 w-4" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;"></div>
+  
+      <!-- Floating Image on the Right Side -->
+      <img src="assets/images/kidney.png" alt="Floating Image" class="absolute right-20 top-32   transform  -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Blue Dot -->
+      <div class="absolute bg-blue-500 rounded-full h-4 w-4" style="top: 50%; right: 0; transform: translate(-50%, -50%); z-index: 10;"></div>
+  </header>
+  
+  <section class="relative">
+      <!-- Half Background Color -->
+      <div class="absolute inset-0 bg-[#E6E9EF]" style="height: 50%; z-index: -1;"></div>
+  
+      <!-- Hero Section -->
+      <div class="relative mx-auto overflow-hidden" style="max-width: 1200px; height: 200px; border-radius: 100px;">
+          <!-- Background Image -->
+          <div class="absolute inset-0 bg-cover bg-center"
+              style="background-image: url('./assets/images/heroimgsec.png'); background-position: center 35%; border-radius: 100px;">
+          </div>
+          <!-- Light Blue Overlay (Now Rounded) -->
+          <div class="absolute inset-0 bg-blue-900 opacity-50" style="border-radius: 100px;"></div>
+          <!-- Content -->
+          <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-white">
+              <h1 class="text-4xl  font-medium mb-4">Medical Services</h1>
+              <div class="flex items-center gap-2">
+                  <a href="index.html" class="hover:underline ">Home</a>
+                  <span>•</span>
+                  <span class="">Medical Services</span>
+              </div>
+          </div>
+      </div>
+  </section>
+>
+
+    <!-- Services Section -->
+    <section class="py-12 px-4 md:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-base font-medium tracking-wider  text-[#6285CA] uppercase mb-2">O U R &nbsp; S E R V I C E S</h3>
+                <h2 class="text-3xl font-medium  text-[#032342]">Medical Services</h2>
+            </div>
+            <div id="services-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8">
+              
+            </div>
+        </div>
+    </section>
+
+<!-- Detailed Information Section (Hidden by Default) -->
+<section id="detailed-info" class="hidden container mx-auto px-4 py-8">
+    <div class="space-y-8">
+      <!-- Back Button -->
+      <button onclick="showAllCards()" class="flex items-center text-sm font-medium text-[#385182] hover:text-blue-800 transition-colors">
+        <i class="ri-arrow-left-line mr-2"></i> Back to Services
+      </button>
+  
+      <!-- Full-width Image -->
+      <div class="relative  overflow-hidden rounded-3xl h-[300px]">
+        <img id="detail-image" src="assets/images/medical1.png" alt="Kidney Stone" class="object-cover w-full"  style="height: 650px;"/>
+      </div>
+  
+      <!-- Main Content and Sidebar -->
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Left Column: Kidney Stone Details -->
+        <section class="md:col-span-2 space-y-6">
+          <div class="space-y-4">
+            <h1 id="detail-title" class="text-4xl font-medium   text-[#032342]"><span class="text-[#385182]" >Kidney  Stone</h1>
+            <h2 class="text-xl font-medium  text-[#032342]">Kidney Stones Treatment Fact</h2>
+            <p id="detail-description" class="text-[#888888]">
+              Around 5% of the world population goes through kidney stone treatment in their lifetime.
+              A stone is a hard, solid mass that can form in the gallbladder, bladder, and kidneys, pancreas etc. Generally, Kidney stones form when minerals or acid salts in urine crystalize. Most stones leave body while urinate. However, sometimes stones get stuck in the ureter, block the normal flow of urine, and cause symptoms. Stones can also be too big to leave the kidney. In both cases you may need treatment to remove the stone.
+            </p>
+  
+            <!-- Medical Terms for Stones -->
+            <div class="space-y-2">
+                <h3 class="font-medium  text-[#032342] text-xl">Medical Terms for Stones</h3>
+                <ul class="list-disc pl-5 space-y-1 text-[#6285CA]  flex flex-wrap">
+                    <li class="w-1/2">Calculi → stones</li>
+                    <li class="w-1/2">Renal calculi → stones in your kidney</li>
+                    <li class="w-1/2">Ureteral calculi → stones in your ureter</li>
+                    <li class="w-1/2">Urolithiasis → stone disease</li>
+                </ul>
+            </div>
+            
+            
+  
+            <!-- Causes of Stones -->
+            <div class="space-y-2">
+              <h3 class="font-medium  text-[#032342] text-xl">Causes of Stones</h3>
+              <ul class="list-disc pl-5 space-y-1 text-[#888888]">
+                <li>A family history of stone disease</li>
+                <li>A stone which contains brushite, uric acid, or urate</li>
+                <li>Stones caused by an infection in your urinary system</li>
+                <li>A genetic condition which makes you prone to forming stones</li>
+                <li>A narrowing of your ureters</li>
+                <li>An obstruction at the junction where your ureter meets your kidney</li>
+                <li>A cyst or a condition called calyceal diverticulum</li>
+                <li>Swelling in one of your ureters, called ureterocele</li>
+                <li>Hyperparathyroidism (excessive production of the parathyroid hormone by the parathyroid glands)</li>
+              </ul>
+            </div>
+  
+            <!-- Symptoms -->
+            <div class="space-y-2">
+              <h3 class="font-medium  text-[#032342] text-xl">Symptoms</h3>
+              <p class="text-[#888888]">
+                People often associate kidney and ureteral stones with pain. However, symptoms can vary from severe pain to no pain at all, depending on stone characteristics – such as the size, shape, and location of the stone in the urinary tract. Severe pain (renal colic). If the stone blocks the normal urine flow through the ureter you will experience severe pain, known as renal colic. This is a sharp pain in the loin and the flank (the side of your body, from the ribs to the hip). If the stone is not in your kidney but in your ureter, you may feel pain in the groin or thigh. Men can also have pain in their testicles Other symptoms that may accompany renal colic are:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-[#6285CA] flex flex-wrap">
+               
+                <li class="w-1/2">Nausea</li>
+                <li class="w-1/2">Painful urination</li>
+                <li class="w-1/2">Vomiting</li>
+                <li class="w-1/2">Fever</li>
+                <li class="w-1/2">Blood in the urine</li>
+            </ul>
+            
+              <p class="text-[#888888]">
+                Renal colic is an emergency situation and you should contact your family doctor or nearest hospital to relieve the pain. In case of high fever you must seek medical help immediately
+              </p >
+              <p class="text-[#888888]">
+                Stones can also cause a recurrent, dull pain in the flank. This kind of pain may be a symptom of <br> other diseases as well, so you will need to take medical tests to find out if you have kidney or ureteral stones.
+              </p>
+              <p class="text-[#888888]">Some stones do not cause any discomfort. These are called asymptomatic stones and are <br> usually small.  They do not block the flow of urine because they are located in the lower part of  <br> the kidney or attached to the ureteral wall. In general asymptomatic stones are found during x-ray  <br>or similar imaging procedures for other conditions.</p>
+            </div>
+  
+            <!-- Diagnosis and Testing -->
+            <div class="space-y-2">
+              <h3 class="font-medium  text-[#032342] text-xl">Kidney Stones Diagnosis and Testing</h3>
+              <p class="text-[#888888] ">
+                If your doctor observes the symptoms related to kidney stones problems, he/she may advise you a few diagnostic tests and procedures such as:
+              </p>
+              <ul class="list-disc pl-5 space-y-1   text-[#888888]">
+                <li><span class="text-[#032342] font-medium">Blood Tests</span> : These tests inform about the presence of too much calcium or uric acid in your blood. It helps doctors to check the health of your kidney.</li>
+                <li><span class="text-[#032342] font-medium">Urine Testing</span> : Doctor may advise you to have two urine collections for two consecutive days to assess the amount of stone forming minerals present in your urine.</li>
+                <li><span class="text-[#032342] font-medium">Imaging</span> : Imaging tests may include simple abdominal X-rays, CT Scan and ultrasound to reveal the presence of kidney stones in your urinary tract. One advanced test is intravenous urography where a dye is injected into an arm vein and x-rays or CT images are taken as dye travels through kidney and bladder.</li>
+                <li><span class="text-[#032342] font-medium">Analyzing passed Kidney Stones</span> :  You will pass urine through a strainer so kidney stones passing through urine can be collected and analyzed in a lab.</li>
+                
+              </ul>
+            </div>
+  
+            <!-- Treatment Options -->
+            <div class="space-y-2">
+              <h3 class="font-medium  text-[#032342] text-xl">Treatment of Kidney and Ureteral Stones</h3>
+             
+              </p>
+              <ul class="list-disc pl-5 space-y-1  text-[#6285CA]">
+                <li>Symptoms</li>
+                <li>Stone characteristics</li>
+                <li>Medical history of patient</li>
+                <li>Patient personal preferences and values</li>
+              </ul>
+              <p class="text-[#888888]">
+                Not all stones require treatment. You need treatment if your stone causes discomfort and does not pass naturally with urine. Doctor may also advise treatment if you have pre-existing medical conditions.
+              </p>
+              <p class="text-[#888888]">
+                If you have a kidney or ureteral stone which does not cause discomfort, you will generally not receive treatment. Your doctor will give you a time schedule for regular control visits to make sure your condition does not get worse
+              </p>
+              <p class="text-[#888888]">Conservative stone treatment If your stone is likely to pass with urine, your doctor can prescribe drugs to ease this process. This is called conservative treatment.</p>
+              <p class="text-[#888888]">If your stone continues to grow or causes frequent and severe pain, you will get active treatment.</p>
+              <h4 class="font-medium  text-[#032342] text-xl">Surgical Treatment</h4>
+              <ul class="list-disc pl-5 space-y-1 text-[#888888]">
+                <li>ESWL – Shock-wave lithotripsy</li>
+                <li>URS – Ureteroscopy</li>
+                <li>PCNL – Percutaneous nephrolithotomy</li>
+                <li>MINIPERC/ULTRAMINIPERC/MICROPERC</li>
+                <li>RIRS – Retrograde intrarenal surgery – THE LATEST LASER METHOD</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Right Column: Medical Services -->
+        <section >
+            <div class="max-w-md mx-auto p-6 bg-[#E8EDF7] rounded-3xl">
+                <h2 class="text-2xl font-medium  text-[#385182] mb-4">Medical Services</h2>
+                <div id="sidebar-services" class="space-y-3 ">
+                  <!-- Sidebar services will be dynamically added here -->
+                </div>
+            </div>
+            </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+    <section class="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center" >
+      <!-- Decorative Elements -->
+      <div class="absolute left-8 top-12 w-3 h-3 rounded-full bg-red-500"></div>
+      <div class="absolute right-8 top-12 w-6 h-6 text-blue-100">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M20.5 3.5L3.5 20.5M3.5 3.5L20.5 20.5" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-400"></div>
+    
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center mb-12">
+          <p class="text-[#6285CA] font-medium  tracking-wide uppercase">S E R V I C E S</p>
+          <h2 class="text-3xl md:text-4xl  font-medium text-[#032342] tracking-tighter text-navy-900">
+            Treatments
+          </h2>
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->           
+          <div class="group relative bg-[#E6E9EF] rounded-2xl shadow-sm hover:shadow-md transition-shadow p-4">
+            <div class="aspect-[4/3] relative rounded-xl overflow-hidden mb-4">
+              <img src="assets/images/body1.png" alt="URS - Ureteroscopy" class="object-cover w-full h-full" />
+              <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <img src="assets/images/arrow-right.png" alt="" />
+              </div>
+            </div>
+            <h3 class=" text-[#032342] text-xl font-medium text-center">URS - Ureteroscopy</h3>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="group relative bg-[#E6E9EF] rounded-2xl shadow-sm hover:shadow-md transition-shadow p-4">
+            <div class="aspect-[4/3] relative rounded-xl overflow-hidden mb-4">
+              <img src="assets/images/body2.png" alt="Retrograde Intrarenal Surgery" class="object-cover w-full h-full" />
+              <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <img src="assets/images/arrow-right.png" alt="" />
+              </div>
+            </div>
+            <h3 class=" text-[#032342] text-xl font-medium text-center">Retrograde Intrarenal Surgery</h3>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="group relative bg-[#E6E9EF] rounded-2xl shadow-sm hover:shadow-md transition-shadow p-4">
+            <div class="aspect-[4/3] relative rounded-xl overflow-hidden mb-4">
+              <img src="assets/images/body3.png" alt="ESWL" class="object-cover w-full h-full" />
+              <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                <img src="assets/images/arrow-right.png" alt="" />
+              </div>
+            </div>
+            <h3 class=" text-[#032342] text-xl font-medium text-center">ESWL</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full py-24 flex flex-col items-center justify-center">
+        <div class="container p-10 bg-cover bg-center text-center rounded-[18px] bg-[#385182]" style="background-image: url('assets/images/linenews.png');">
+          <div class="newsletter_content">
+            <h2 class="text-white text-5xl font-medium mb-5">Newsletter</h2>
+            <span class="text-white text-2xl font-medium">Get Smarter About No-Code</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+            </svg>
+            <div class="flex items-center justify-center my-4">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+              <p class="text-[#AFB9CD] text-base mx-2" style="color: #AFB9CD;">
+                The best No-Code tips & tricks, for webflow & Framer developers from <br>experts to beginner. Join our 3k community by subscribing
+              </p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="flex justify-center mt-4">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                class="text-white text-lg px-3 py-2 rounded-[10px] outline-none border border-[#8f9db8] bg-[#445b89] placeholder:text-white"
+              />
+              <a
+                href="#subscribe"
+                class="subscribe_btn inline-block border border-[#032342] text-[#385182] bg-white rounded-[12px] px-6 py-3 text-lg font-medium transition duration-300 hover:bg-[#6285ca] hover:text-white ml-3"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#032342] text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="f_left">
+                        <h4 class="text-4xl font-medium mb-5">Dhameliya Kidney Hospital</h4>
+                        <p class="text-lg mb-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim laboriosam eius voluptate ipsam, error fugit praesentium aut modi. Rerum obcaecati deleniti laboriosam nesciunt nisi
+                        </p>
+                        <div class="flex space-x-5">
+                            <i class="ri-facebook-circle-fill text-2xl"></i>
+                            <i class="ri-instagram-fill text-2xl"></i>
+                            <i class="ri-linkedin-box-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Middle Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="mid_footer">
+                        <h5 class="text-2xl font-medium mb-8">Get in Touch</h5>
+                        <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                        <p class="text-lg mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur omnis adipisci</p>
+                        <div class="phone pt-4 flex items-center">
+                            <i class="ri-phone-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            <span class="text-lg">+91 261 2490001</span>
+                        </div>
+                        <div class="flex items-center py-4">
+                            <div class="location">
+                                <i class="ri-map-pin-2-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            </div>
+                            <span class="text-lg">402, Aayush Doctor House, Lal Darwaja, Station Road, SURAT 395002-GUJ INDIA</span>
+                        </div>
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Get Direction <i class="ri-arrow-right-line"></i></a>
+                        <br />
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Our Branches <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Right Section -->
+                <div class="col-span-1">
+                    <div class="footerRight">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Medical Services</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="m_services space-y-3">
+                                    <li class="text-lg icon-list">Kidney Stone</li>
+                                    <li class="text-lg icon-list">Prostate</li>
+                                    <li class="text-lg icon-list">Uro Oncology</li>
+                                    <li class="text-lg icon-list">Paediatric Urology</li>
+                                    <li class="text-lg icon-list">Female Urology</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Quick Links</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="q_services space-y-3">
+                                    <li class="text-lg icon-list">Home</li>
+                                    <li class="text-lg icon-list">About Us</li>
+                                    <li class="text-lg icon-list">Medical Services</li>
+                                    <li class="text-lg icon-list">Testimonials</li>
+                                    <li class="text-lg icon-list">Contact Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Line -->
+            <div class="border-t border-white my-10"></div>
+    
+            <!-- Copyright -->
+            <p class="text-center text-xl">Non Copyrighted @ 2022 Designed and uploaded by Dhameliya Kidney Hospital</p>
+        </div>
+    </footer>
+
+    <script>
+      // Data for service items
+      const services = [
+          { 
+              title: 'Kidney Stone', 
+              imgSrc: 'assets/images/bigkidney.png', 
+              description: 'Almost 12% of the world\'s population experiences kidney stone at some point in their lifetime. A kidney stone is a solid mass made up of tiny crystals that can block the urinary tract.                                                                                                                                                                                                        A stone is a hard, solid mass that can form in the gallbladder, bladder, and kidneys, pancreas etc. Generally, Kidney stones form when minerals or acid salts in urine crystalize. Most stones leave body while urinate. However, sometimes stones get stuck in the ureter, block the normal flow of urine, and cause symptoms. Stones can also be too big to leave the kidney. In both cases you may need treatment to remove the stone.',
+              causes: ['Family history of stone disease', 'Not drinking enough water or fluids', 'Obesity', 'High protein diet', 'Excessive salt intake'],
+              treatment: 'Treatment depends on the stone\'s size, location, and severity of symptoms. Options may include medication, shock wave therapy, or surgical removal.'
+          },
+          { 
+              title: 'Prostate', 
+              imgSrc: 'assets/images/bigimg2.png', 
+              description: 'Prostate issues are common in men, especially as they age. Conditions include benign prostatic hyperplasia (BPH), prostatitis, and prostate cancer.',
+              causes: ['Aging', 'Family history', 'Hormonal changes', 'Lifestyle factors'],
+              treatment: 'Treatment options vary depending on the condition and may include medication, lifestyle changes, or surgery.'
+          },
+          { 
+              title: 'Uro Oncology', 
+              imgSrc: 'assets/images/bigcard3.png', 
+              description: 'Uro-oncology focuses on cancers of the urinary system, including the bladder, kidneys, and prostate.',
+              causes: ['Smoking', 'Exposure to chemicals', 'Chronic bladder inflammation', 'Genetic factors'],
+              treatment: 'Treatment may include surgery, chemotherapy, radiation therapy, or immunotherapy.'
+          },
+          { 
+              title: 'Paediatric Urology', 
+              imgSrc: 'assets/images/big4.png', 
+              description: 'Paediatric urology deals with urinary tract and genital problems in children.',
+              causes: ['Congenital abnormalities', 'Infections', 'Trauma'],
+              treatment: 'Treatment depends on the specific condition and may include medication, surgery, or lifestyle changes.'
+          },
+          { 
+              title: 'Female Urology', 
+              imgSrc: 'assets/images/bigcard5.png', 
+              description: 'Female urology focuses on urinary and pelvic health issues specific to women.',
+              causes: ['Pregnancy', 'Menopause', 'Pelvic surgery', 'Neurological disorders'],
+              treatment: 'Treatment may include medication, physical therapy, or surgery.'
+          },
+          { 
+              title: 'Reconstructive Urology', 
+              imgSrc: 'assets/images/bigcard6.png', 
+              description: 'Reconstructive urology involves repairing or reconstructing parts of the urinary tract.',
+              causes: ['Trauma', 'Surgery complications', 'Congenital defects'],
+              treatment: 'Treatment may involve surgical reconstruction or the use of prosthetics.'
+          },
+          { 
+              title: 'Andrology', 
+              imgSrc: 'assets/images/bigcard7.png', 
+              description: 'Andrology focuses on male reproductive health and urological issues.',
+              causes: ['Hormonal imbalances', 'Infections', 'Lifestyle factors'],
+              treatment: 'Treatment may include medication, surgery, or lifestyle changes.'
+          },
+          { 
+              title: 'Laproscopic Urology', 
+              imgSrc: 'assets/images/bigcard8.png', 
+              description: 'Laparoscopic urology involves minimally invasive surgery for urological conditions.',
+              causes: ['Kidney stones', 'Prostate issues', 'Tumors'],
+              treatment: 'Treatment involves laparoscopic surgery with smaller incisions and faster recovery.'
+          },
+          { 
+              title: 'Cystoscopy & Ureteroscopy', 
+              imgSrc: 'assets/images/bigcard9.png', 
+              description: 'Cystoscopy and ureteroscopy are diagnostic and therapeutic procedures for the urinary tract.',
+              causes: ['Urinary tract infections', 'Kidney stones', 'Tumors'],
+              treatment: 'Treatment may involve removing stones, taking biopsies, or treating tumors.'
+          },
+          { 
+              title: 'PCNL', 
+              imgSrc: 'assets/images/bigcard10.png', 
+              description: 'Percutaneous nephrolithotomy (PCNL) is a procedure to remove large kidney stones.',
+              causes: ['Large kidney stones', 'Recurrent infections', 'Blockages'],
+              treatment: 'Treatment involves surgically removing stones through a small incision in the back.'
+          }
+      ];
+  
+      // Function to generate the HTML for a service item
+      function generateServiceItem(service, index) {
+    return `
+       <div id="service-${index}" class="relative bg-[#E8EDF7] rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-shadow service-card">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#354D7C1A] rounded-bl-[100px] -z-0"></div>
+    <div class="relative z-10 flex flex-col items-center">
+        <div class="rounded-full overflow-hidden mb-6 border-8 border-white w-32 h-32 flex items-center justify-center">
+            <img src="${service.imgSrc}" alt="${service.title}" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <h3 class="text-2xl  font-medium text-[#032342] mb-6 text-center">${service.title}</h3>
+        <button onclick="showDetails(${index})" class="inline-flex items-center text-sm font-medium text-white bg-[#385182] px-6 py-3 rounded hover:bg-[#385182]-dark transition-colors">
+            Read More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+</div>
+    `;
+}
+        // Function to render all service items
+      function renderServices() {
+          const container = document.getElementById('services-container');
+          container.innerHTML = services.map((service, index) => generateServiceItem(service, index)).join('');
+      }
+  
+      // Function to show detailed information
+      function showDetails(index) {
+    console.log("showDetails called with index:", index); // Debugging line
+
+    const service = services[index];
+    if (!service) {
+        console.error("Service not found for index:", index); // Debugging line
+        return;
+    }
+
+    // Hide the services container and show the detailed info section
+    document.getElementById('services-container').classList.add('hidden');
+    document.getElementById('detailed-info').classList.remove('hidden');
+
+    // Update detailed information
+    document.getElementById('detail-image').src = service.imgSrc;
+    document.getElementById('detail-title').textContent = service.title;
+    document.getElementById('detail-description').textContent = service.description;
+
+    // Populate the Medical Services sidebar
+    const sidebar = document.getElementById('sidebar-services');
+    if (!sidebar) {
+        console.error("sidebar-services element not found!"); // Debugging line
+        return;
+    }
+
+    console.log("Populating sidebar with services:", services); // Debugging line
+    sidebar.innerHTML = services.map((s, i) => `
+  <div class="p-4 rounded-xl border border-gray-200 bg-white transition-all duration-300 ease-in-out transform shadow-[0px_10px_11px_0px_#0000000D] hover:shadow-[0px_14px_15px_0px_#0000001A] hover:-translate-y-1 hover:bg-slate-100" style="${i === index ? 'box-shadow: 0px 10px 11px 0px #0000000D; z-index: 10;' : ''}">
+    <a href="#" onclick="showDetails(${i})" class="flex items-center  font-medium text-[#032342] justify-between">
+        <span class="text-gray-700">${s.title}</span>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out" style="background-color: ${i === index ? 'white' : '#385182'}">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16968 7.20386L14.5913 7.20386L14.5913 12.6255" stroke="${i === index ? '#385182' : 'white'}" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.99927 14.7961L14.5154 7.27997" stroke="${i === index ? '#385182' : 'white'}" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>  
+    </a>
+</div>
+
+
+    `).join('');
+
+    console.log("Sidebar content after update:", sidebar.innerHTML); // Debugging line
+}
+  
+      // Function to show all cards again
+      function showAllCards() {
+          document.getElementById('services-container').classList.remove('hidden');
+          document.getElementById('detailed-info').classList.add('hidden');
+      }
+  
+      // Render the services on page load
+      window.onload = renderServices;
+  </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo770 1.png" />
+
+    <title>Dhameliya Kidney Hospital</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fredoka Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <style>
+        /* Apply Fredoka font to the heading */
+        .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Custom color for the word "good" */
+        .text-custom-blue {
+            color: #6285CA;
+        }
+        .custom-color {
+  color: #6285CA !important;
+}   /* Hide default "No file chosen" text */
+    input[type="file"] {
+      color: transparent;
+    }
+
+    /* Style the "Choose File" button */
+    input[type="file"]::file-selector-button {
+      border: none;
+      background: none;
+      color:#032342; /* Text color */
+      padding: 0;
+      margin-right: 1rem;
+      font-family: 'Fredoka', sans-serif;
+      font-size: inherit;
+      cursor: pointer;
+      position: relative; /* Required for ::after */
+    }
+
+    /* Add underline to "Choose File" button */
+    input[type="file"]::file-selector-button::after {
+      content: "";
+      position: absolute;
+      left: 0; 
+      color: #032342;
+      right: 0;
+      bottom: -2px; /* Adjust position of underline */
+      height: 1px;
+      background-color: #032342; /* Underline color */
+    }
+
+    /* Remove hover effect */
+    input[type="file"]::file-selector-button:hover {
+      background: none;
+    }
+    </style>
+</head>
+<body class="m-0 font-sans antialiased font-fredoka">
+    <!-- Header -->
+    <header id="header" class="py-8 bg-[#E6E9EF] relative">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Logo and Hospital Name -->
+          <div class="flex items-center">
+              <a href="javascript:void(0)" class="flex items-center">
+                  <img src="assets/images/logo770 1.png" alt="Logo" class="mr-4">
+                  <img src="assets/images/Dhameliya Kidney Hospital.png" alt="Dhameliya Kidney Hospital" class="h-12">
+              </a>
+          </div>
+  
+          <!-- Navigation Menu -->
+          <nav id="navbar" class="navbar">
+              <ul class="flex space-x-4 list-none p-0 m-0 items-center">
+                  <li><a href="index.html" class="nav-link scrollto active px-4 py-2 text-primary hover:text-primary transition duration-300">Home</a></li>
+                  <li><a href="About.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">About</a></li>
+                  <li class="dropdown relative">
+                      <a href="Medical_services.html" class="flex items-center px-4 py-2 text-primary hover:text-primary transition duration-300">
+                          <span>Medical services</span>
+                          <i class="ri-arrow-down-s-line ml-1"></i>
+                      </a>
+                      <ul class="dropdown-menu absolute left-0 top-full mt-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 1</a></li>
+                          <li class="dropdown relative">
+                              <a href="javascript:void(0)" class="flex items-center px-5 py-2 text-primary hover:bg-gray-200">
+                                  <span>Service 2</span>
+                                  <i class="ri-arrow-right-s-line ml-auto"></i>
+                              </a>
+                              <ul class="dropdown-menu absolute left-full top-0 ml-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 1</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 2</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 3</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 4</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 3</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 4</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="careear.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Career</a></li>
+                  <li><a href="News.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">News</a></li>
+                  <li><a href="Contactus.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Contact</a></li>
+              </ul>
+          </nav>
+           
+           <div class="flex items-center">   
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.1499 15.9751C15.0624 15.9626 14.9499 15.9626 14.8499 15.9751C12.6499 15.9001 10.8999 14.1001 10.8999 11.8876C10.8999 9.6251 12.7249 7.7876 14.9999 7.7876C17.2624 7.7876 19.0999 9.6251 19.0999 11.8876C19.0874 14.1001 17.3499 15.9001 15.1499 15.9751Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.4252 24.2252C21.2002 26.2627 18.2502 27.5002 15.0002 27.5002C11.7502 27.5002 8.8002 26.2627 6.5752 24.2252C6.7002 23.0502 7.4502 21.9002 8.7877 21.0002C12.2127 18.7252 17.8127 18.7252 21.2127 21.0002C22.5502 21.9002 23.3002 23.0502 23.4252 24.2252Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      
+       
+          <!-- Make Appointment Button -->
+          <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-6 py-2 ml-6 hover:bg-primary-dark transition duration-300 hidden lg:inline-block">
+              Make Appointment
+          </a>
+           </div>
+          <!-- Mobile Nav Toggle -->
+          <i class="ri-menu-fill text-primary text-2xl cursor-pointer lg:hidden"></i>
+      </div>
+  
+      <!-- Pseudo-element to extend the header background -->
+      <div class="header-bg-extension"></div>
+  
+      <!-- Floating Image on the Left Side -->
+      <img src="assets/images/helthkit.png" alt="Floating Image" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Round Shape -->
+      <div class="absolute bg-[#FA7E8E] rounded-full h-4 w-4" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;"></div>
+  
+      <!-- Floating Image on the Right Side -->
+      <img src="assets/images/kidney.png" alt="Floating Image" class="absolute right-20 top-32   transform  -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Blue Dot -->
+      <div class="absolute bg-blue-500 rounded-full h-4 w-4" style="top: 50%; right: 0; transform: translate(-50%, -50%); z-index: 10;"></div>
+  </header>
+  
+  <section class="relative">
+      <!-- Half Background Color -->
+      <div class="absolute inset-0 bg-[#E6E9EF]" style="height: 50%; z-index: -1;"></div>
+  
+      <!-- Hero Section -->
+      <div class="relative mx-auto overflow-hidden" style="max-width: 1200px; height: 200px; border-radius: 100px;">
+          <!-- Background Image -->
+          <div class="absolute inset-0 bg-cover bg-center"
+              style="background-image: url('./assets/images/heroimgsec.png'); background-position: center 35%; border-radius: 100px;">
+          </div>
+          <!-- Light Blue Overlay (Now Rounded) -->
+          <div class="absolute inset-0 bg-blue-900 opacity-50" style="border-radius: 100px;"></div>
+          <!-- Content -->
+          <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-white">
+              <h1 class="text-4xl  font-medium mb-4">Career</h1>
+              <div class="flex items-center gap-2">
+                  <a href="index.html" class="hover:underline ">Home</a>
+                  <span>•</span>
+                  <span class="">Career</span>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-[#F5F6F9]" style="background-color: #F5F6F9;">
+      <div class="container mx-auto px-4 md:px-6"> <!-- Added mx-auto to center the container -->
+        <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"> <!-- Changed items-start to items-center -->
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <p class="text-[#6285CA]   font-medium tracking-wide uppercase">C A R E E R</p>
+                <h1 class="text-5xl  font-medium tracking-tighter text-[#032342] sm:text-4xl md:text-5xl">
+                  Leave A <span class="text-[#385182]">Message</span>
+                </h1>
+              </div>
+              <p class="text-[#888888]   md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
+                Dhameliya Kidney Hospital has born out of the need for a good center which catered to patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology, world class expertise and outstanding personalized care. With time it has become best kidney hospital in SURAT. Hospital with all facilities under one roof provides for greater efficiency in meeting the overall needs of a patient.
+              </p>
+            </div>
+            <form 
+            class="space-y-4 bg-white p-8 rounded-3xl shadow-md mx-auto" 
+            style="
+              max-width: 800px; /* Width increase */
+              min-height: 500px; /* Height increase (optional) */
+              box-shadow: -10px -16px 56px -1px #0000000D;
+            "
+          >
+            <!-- Form content -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="Name" 
+                  class="w-full p-3 rounded-md text-[#6285CA]  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  style="background-color: #0323420A;"
+                />
+              </div>
+              <div>
+                <input 
+                  type="email" 
+                  placeholder="Email" 
+                  class="w-full p-3 rounded-md  text-[#6285CA]  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  style="background-color: #0323420A;"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <input 
+                  type="tel"   
+                  placeholder="Phone number" 
+                  class="w-full p-3 rounded-md  text-[#6285CA]  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  style="background-color: #0323420A;"
+                />
+              </div>
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="Experience" 
+                  class="w-full p-3 rounded-md  border-gray-300  text-[#6285CA] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  style="background-color: #0323420A;"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="file-input-wrapper">
+                <input 
+                type="file" 
+                class="w-full p-3 rounded-md  border-gray-300  text-[#6285CA] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                style="background-color: #0323420A;"
+              />
+              </div>
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="Designation" 
+                  class="w-full p-3 rounded-md  border-gray-300  text-[#6285CA] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  style="background-color: #0323420A;"
+                />
+              </div>
+            </div>
+            <div>
+              <textarea 
+                placeholder="Message" 
+                class="w-full p-3 rounded-md  border-gray-300  text-[#6285CA] focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[150px]"
+                style="background-color: #0323420A;"
+              ></textarea>
+            </div>
+            <div>
+              <button 
+              type="submit"
+              class="w-44 bg-[#2B3674] hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-2xl transition-colors"
+              style="background-color: #385182;"
+          >
+              Submit &nbsp; <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+            </div>
+          </form>
+          </div>
+          <div class="lg:pl-10 relative">
+            <div class="absolute -left-16 top-[0]">
+              <img
+                src="assets/images/linecareer.png"
+                alt="DNA spiral decoration"
+                width="100"
+                height="200"
+                class=""
+              />
+            </div>
+            <div class="rounded-3xl overflow-hidden">
+              <img
+                src="assets/images/carrer.png"
+                alt="Modern medical facility"
+                width="800"
+                height="600"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full py-24 flex flex-col items-center justify-center">
+      <div class="container p-10 bg-cover bg-center text-center rounded-[18px] bg-[#385182]" style="background-image: url('assets/images/linenews.png');">
+        <div class="newsletter_content">
+          <h2 class="text-white text-5xl font-medium mb-5">Newsletter</h2>
+          <span class="text-white text-2xl font-medium">Get Smarter About No-Code</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+          </svg>
+          <div class="flex items-center justify-center my-4">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+            </svg>
+            <p class="text-[#AFB9CD] text-base mx-2" style="color: #AFB9CD;">
+              The best No-Code tips & tricks, for webflow & Framer developers from <br>experts to beginner. Join our 3k community by subscribing
+            </p>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="flex justify-center mt-4">
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="text-white text-lg px-3 py-2 rounded-[10px] outline-none border border-[#8f9db8] bg-[#445b89] placeholder:text-white"
+            />
+            <a
+              href="#subscribe"
+              class="subscribe_btn inline-block border border-[#032342] text-[#385182] bg-white rounded-[12px] px-6 py-3 text-lg font-medium transition duration-300 hover:bg-[#6285ca] hover:text-white ml-3"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer id="footer" class="bg-[#032342] text-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Section -->
+            <div class="col-span-1 pr-20">
+                <div class="f_left">
+                    <h4 class="text-4xl font-medium mb-5">Dhameliya Kidney Hospital</h4>
+                    <p class="text-lg mb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim laboriosam eius voluptate ipsam, error fugit praesentium aut modi. Rerum obcaecati deleniti laboriosam nesciunt nisi
+                    </p>
+                    <div class="flex space-x-5">
+                        <i class="ri-facebook-circle-fill text-2xl"></i>
+                        <i class="ri-instagram-fill text-2xl"></i>
+                        <i class="ri-linkedin-box-fill text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Section -->
+            <div class="col-span-1 pr-20">
+                <div class="mid_footer">
+                    <h5 class="text-2xl font-medium mb-8">Get in Touch</h5>
+                    <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                    <p class="text-lg mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur omnis adipisci</p>
+                    <div class="phone pt-4 flex items-center">
+                        <i class="ri-phone-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                        <span class="text-lg">+91 261 2490001</span>
+                    </div>
+                    <div class="flex items-center py-4">
+                        <div class="location">
+                            <i class="ri-map-pin-2-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                        </div>
+                        <span class="text-lg">402, Aayush Doctor House, Lal Darwaja, Station Road, SURAT 395002-GUJ INDIA</span>
+                    </div>
+                    <a href="#" class="text-white text-lg inline-block py-2 pr-4">Get Direction <i class="ri-arrow-right-line"></i></a>
+                    <br />
+                    <a href="#" class="text-white text-lg inline-block py-2 pr-4">Our Branches <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-span-1">
+                <div class="footerRight">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-1">
+                            <h6 class="text-2xl font-medium mb-8">Medical Services</h6>
+                            <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                            <ul class="m_services space-y-3">
+                                <li class="text-lg icon-list">Kidney Stone</li>
+                                <li class="text-lg icon-list">Prostate</li>
+                                <li class="text-lg icon-list">Uro Oncology</li>
+                                <li class="text-lg icon-list">Paediatric Urology</li>
+                                <li class="text-lg icon-list">Female Urology</li>
+                            </ul>
+                        </div>
+                        <div class="col-span-1">
+                            <h6 class="text-2xl font-medium mb-8">Quick Links</h6>
+                            <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                            <ul class="q_services space-y-3">
+                                <li class="text-lg icon-list">Home</li>
+                                <li class="text-lg icon-list">About Us</li>
+                                <li class="text-lg icon-list">Medical Services</li>
+                                <li class="text-lg icon-list">Testimonials</li>
+                                <li class="text-lg icon-list">Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Line -->
+        <div class="border-t border-white my-10"></div>
+
+        <!-- Copyright -->
+        <p class="text-center text-xl">Non Copyrighted @ 2022 Designed and uploaded by Dhameliya Kidney Hospital</p>
+    </div>
+</footer>
+
+
+      
+      <script>
+        // JavaScript to display file name
+        function updateFileName(input) {
+          const fileNameDisplay = document.getElementById('file-name');
+          if (input.files.length > 0) {
+            fileNameDisplay.textContent = input.files[0].name;
+          } else {
+            fileNameDisplay.textContent = '';
+          }
+        }
+      </script>
+</body>
+</html>     

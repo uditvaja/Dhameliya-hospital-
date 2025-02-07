@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo770 1.png" />
+
+    <title>Dhameliya Kidney Hospital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fredoka Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DS+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Add this to the <head> section of your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Add this before the closing </body> tag -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        /* Apply Fredoka font to the heading */
+        .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+       .font-Ds-sans{
+        font-family: 'DS Sans';
+       }
+        /* Custom color for the word "good" */
+        .text-custom-blue {
+            color: #6285CA;
+        }
+        /* Ensure navigation buttons are visible */
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex !important; /* Force display */
+  align-items: center;
+  justify-content: center;
+  position: static; /* Override Swiper's default absolute positioning */
+  margin-top: 0; /* Remove default margin */
+}
+
+/* Adjust the container for navigation buttons */
+.srvs_left,
+.srvs_right {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+ @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Apply animation on hover */
+  .slide-left:hover {
+    animation: slideLeft 0.5s ease-in-out;
+  }
+
+  .slide-right:hover {
+    animation: slideRight 0.5s ease-in-out;
+  }
+
+  .swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+    </style>
+</head>
+
+<body class="m-0 font-sans antialiased  font-fredoka">
+    <!-- Header -->
+    <header id="header" class="py-8 bg-gray-100 relative">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Logo and Hospital Name -->
+          <div class="flex items-center">
+              <a href="javascript:void(0)" class="flex items-center">
+                  <img src="assets/images/logo770 1.png" alt="Logo" class="mr-4">
+                  <img src="assets/images/Dhameliya Kidney Hospital.png" alt="Dhameliya Kidney Hospital" class="h-12 ">
+              </a>
+          </div>
+  
+          <!-- Navigation Menu -->
+          <nav id="navbar" class="navbar">
+              <ul class="flex space-x-4 list-none p-0 m-0 items-center">
+                  <li><a href="#home" class="nav-link scrollto active px-4 py-2 text-primary hover:text-primary transition duration-300 ">Home</a></li>
+                  <li><a href="About.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300 ">About</a></li>
+                  <li class="dropdown relative">
+                      <a href="Medical_services.html" class="flex items-center px-4 py-2 text-primary hover:text-primary transition duration-300 ">
+                          <span>Medical services</span>
+                          <i class="ri-arrow-down-s-line ml-1"></i>
+                      </a>
+                      <ul class="dropdown-menu absolute left-0 top-full mt-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Service 1</a></li>
+                          <li class="dropdown relative">
+                              <a href="javascript:void(0)" class="flex items-center px-5 py-2 text-primary hover:bg-gray-200 ">
+                                  <span>Service 2</span>
+                                  <i class="ri-arrow-right-s-line ml-auto"></i>
+                              </a>
+                              <ul class="dropdown-menu absolute left-full top-0 ml-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-black hover:bg-gray-200 ">Sub Service 1</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Sub Service 2</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Sub Service 3</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Sub Service 4</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Sub Service 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Service 3</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Service 4</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200 ">Service 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="careear.html" class="nav-link scrollto px-4 py-2 text-[#032342] hover:text-[#385182] transition duration-300 ">Career</a></li>
+                  <li><a href="News.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300 ">News</a></li>
+                  <li><a href="Contactus.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300 ">Contact</a></li>
+              </ul>
+          </nav>
+  
+          <!-- Make Appointment Button -->
+          <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-6 py-2 hover:bg-primary-dark transition duration-300 hidden lg:inline-block ">
+              Make Appointment
+          </a>
+  
+          <!-- Mobile Nav Toggle -->
+          <i class="ri-menu-fill text-primary text-2xl cursor-pointer lg:hidden"></i>
+      </div>
+  </header>
+    <!-- Padding between Header and Section -->
+    <!-- Hero Section -->
+
+    <section id="hero" class="bg-gray-100 relative">
+      <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+              <!-- Left Column -->
+              <div class="w-full lg:w-1/2">
+                  <div class="relative">
+                      <h2 class="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-4 ">
+                          Find the good life by <br>
+                          <span class="text-custom-blue">good</span> 
+                          <span class="inline-flex items-center">
+                              health
+                              <img src="assets/images/medicine.png" alt="Medicine" class="ml-2 w-6 h-6 sm:w-5 sm:h-5 md:w-7 md:h-7">
+                          </span>
+                      </h2>
+                      <p class="w-3/4 text-gray-600 mb-4 text-sm sm:text-xs md:text-base">
+                          Dhameliya Kidney Hospital has born out of the need for a good centre which catered to patients with complicated kidney diseases in Surat.
+                      </p>
+                      <div class="flex mb-4 sm:mb-3 md:mb-5">
+                          <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-4 sm:px-3 sm:py-1 md:px-5 md:py-2 py-2 hover:bg-primary-dark transition duration-300 mr-3 lg:inline-block">
+                              Make Appointment
+                          </a>
+                          <a href="#learn_more" class="text-primary border border-primary rounded-lg px-4 sm:px-3 sm:py-1 md:px-5 md:py-2 py-2 hover:bg-primary-dark hover:text-white transition duration-300 lg:inline-block">
+                              Learn More
+                          </a>
+                      </div>
+  
+                      <!-- Doctor Image: Visible only on large screens -->
+                      <div class="w-1/2 bg-primary rounded-t-full sm:w-3/4 mt-16 sm:mt-8 hidden lg:block">
+                          <img src="assets/images/herosection1.png" alt="Doctor" class="w-full">
+                      </div>
+  
+                      <!-- Background Images -->
+                      <img src="assets/images/arrow.png" alt="Arrow" class="absolute top-1/2 left-3/4 transform -translate-y-1/2 w-12 sm:w-8 md:w-10">
+                      <img src="assets/images/blur.png" alt="Hospital" class="absolute top-4/5 left-3/4 transform -translate-y-1/2 w-20 sm:w-12 md:w-16">
+                  </div>
+              </div>
+  
+              <!-- Right Column -->
+              <div class="w-full lg:w-1/2 flex flex-wrap">
+                  <div class="w-1/2">
+                      <div class="flex gap-3 m-2 sm:m-1 md:m-3">
+                          <div class="w-1/2 bg-primary rounded-lg text-center py-4 sm:py-2">
+                              <img src="assets/images/helthkit.png" alt="Medico Kit" class="mx-auto w-20 sm:w-12 md:w-16">
+                          </div>
+                          <div class="w-1/2 bg-gray-300 rounded-lg text-center py-4 sm:py-2">
+                              <img src="assets/images/kidney.png" alt="Kidney" class="mx-auto w-20 sm:w-12 md:w-16">
+                          </div>
+                      </div>
+                      <div class="bg-primary rounded-lg text-center py-4 m-2 sm:m-1 md:m-3">
+                          <img src="assets/images/maledoctor.png" alt="Doctor 1" class="mx-auto w-32 sm:w-20 md:w-28">
+                      </div>
+                      <div class="bg-primary rounded-lg text-center py-4 sm:50% md:70%; m-2 sm:m-1 md:m-3 bg-cover bg-center" style="background-image: url('./line_bg.png'); background-size: 80% ">
+                          <div class="flex items-center justify-center text-left mb-3">
+                              <div class="mr-3">
+                                  <img src="assets/images/profiledr.png" alt="Doctor 4" class="w-10 sm:w-6 md:w-8">
+                              </div>
+                              <div>
+                                  <h2 class="text-white text-lg sm:text-sm md:text-base">Dr. Alex Smith</h2>
+                                  <span class="text-gray-200 text-xs sm:text-xs md:text-sm">Infermrdica Hospital</span>
+                              </div>
+                          </div>
+                          <a href="#help" class="border border-white text-white rounded-lg px-4 sm:px-2 sm:py-1 md:px-5 md:py-2 hover:bg-white hover:text-primary transition duration-300 hidden lg:inline-block">
+                              Make Appointment
+                          </a>
+                      </div>
+                  </div>
+  
+                  <div class="w-1/2">
+                      <div class="bg-primary rounded-xl h-80 sm:h-48 md:h-64 mt-6 relative m-2 sm:m-1 md:m-3">
+                          <img src="assets/images/femaledoctor.png" alt="Doctor 2" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-56 sm:w-36 md:w-48">
+                      </div>
+                      <div class="rounded-lg m-2 sm:m-1 md:m-3">
+                          <img src="assets/images/opraton.png" alt="Doctor 3" class="w-full sm:w-3/4 md:w-4/5">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Doctor Image: Visible only on mobile screens and placed at the end -->
+      <div class="w-full p-10 grid place-items-center rounded-t-full sm:w mt-6 mx-auto lg:hidden">
+          <img src="assets/images/herosection1.png" alt="Doctor" class="w-full">
+      </div>
+  </section>
+  
+   
+    <!-- About Section -->
+    <section id="about" class="">
+      <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -mx-4">
+              <!-- Left Side (Image and Happy Clients) -->
+              <div class="w-full lg:w-1/2 px-4 relative">
+                  <!-- Image -->
+                  <div class="w-[140px] absolute left-10">
+                      <img src="assets/images/aboutsec.png" alt="" class="w-full" />
+                  </div>
+  
+                  <!-- Happy Clients (Desktop) -->
+                  <div class="hidden lg:block happy_clnt z-10 absolute bg-white w-42 p-5 rounded-2xl shadow-lg text-center top-0 left-0 transform translate-x-1/2">
+                      <h6 class="text-sm font-medium">Our Happy Clients</h6>
+                      <p class="inline-block mb-3 text-sm">150+ clients</p>
+                      <div class="flex items-center justify-center">
+                          <img src="assets/images/Ellipse 203.png" alt="" class="w-10 h-10" />
+                          <img src="assets/images/Ellipse 204.png" alt="" class="w-10 h-10 -ml-4" />
+                          <img src="assets/images/Ellipse 204.png" alt="" class="w-10 h-10 -ml-4" />
+                          <img src="assets/images/Ellipse 205.png" alt="" class="w-10 h-10 -ml-4" />
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Right Side (Content) -->
+              <div class="w-full lg:w-1/2 px-4 mt-10 lg:mt-0">
+                  <span class="text-secondary text-sm  text-[#6285CA] font-medium">A B O U T &nbsp; &nbsp; H O S P I T A L</span>
+                  <h2 class="text-4xl font-medium text-gray-800  mt-4 mb-6">Super <span class="text-[#385182]">Speciality</span> Hospital <br> Of South Gujarat.</h2>
+                  <p class="text-gray-500 text-lg mb-6">
+                      Dhameliya Kidney Hospital has born out of the need for a good center which catered to patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology, world class expertise and outstanding personalized care. With time it has become best kidney hospital in SURAT. Hospital with all facilities under one roof provides for greater efficiency in meeting the overall needs of a patient.
+                      <br />
+                      <br />
+                      Patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology.
+                  </p>
+                  <a href="#help" class="mk_apmt_btn hidden lg:inline-block bg-primary  text-white px-6 py-2 rounded-lg font-medium transition duration-300 hover:bg-blue-700">
+                      Read More <i class="fa-solid fa-arrow-left fa-flip-horizontal"></i>
+                  </a>
+              </div>
+  
+              <!-- Happy Clients (Mobile) -->
+              <div class="w-full px-4 lg:hidden mt-10 order-last">
+                  <div class="happy_clnt bg-white w-42 p-5 rounded-2xl shadow-lg text-center mx-auto">
+                      <h6 class="text-sm font-medium">Our Happy Clients</h6>
+                      <p class="inline-block mb-3 text-sm">150+ clients</p>
+                      <div class="flex items-center justify-center">
+                          <img src="assets/images/Ellipse 203.png" alt="" class="w-10 h-10" />
+                          <img src="assets/images/Ellipse 204.png" alt="" class="w-10 h-10 -ml-4" />
+                          <img src="assets/images/Ellipse 204.png" alt="" class="w-10 h-10 -ml-4" />
+                          <img src="assets/images/Ellipse 205.png" alt="" class="w-10 h-10 -ml-4" />
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="services" class="services_section py-12">
+    <div class="container mx-auto px-4">
+      <div class="s_title text-center mb-8">
+        <span class="font-medium text-[#6285CA] ">S E R V I C E S</span>
+        <h2 class="text-4xl font-medium  text-[#032342] my-3">
+          Our <span class="text-[#385182]">Medical</span> Services
+        </h2>
+      </div>
+  
+      <!-- Swiper Container -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="card bg-[#38518214] border-0 p-6 rounded-t-2xl rounded-e-2xl shadow-lg transition-all duration-500 overflow-hidden w-[90%] mx-auto h-[400px] flex flex-col">
+              <div class="flex justify-between items-center">
+                <h2 class="text-xl text-[#032342] font-medium ">Kidney Stone</h2>
+                <div class="peginetion bg-[#385182] px-2.5 py-1.5 rounded-full transition-all duration-500">
+                  <i class="ri-arrow-right-up-line text-white"></i>
+                </div>
+              </div>
+              <p class="text-lg text-[#888888] mt-4 mb-4 flex-grow">
+                We are providing the cardiology services for our patients that are very much needed.
+              </p>
+              <img src="assets/images/Rectangle 4345.png" alt="" class="w-full h-[250px] object-cover rounded-t-2xl rounded-e-2xl transition-all duration-500" />
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="swiper-slide relative">
+            <div class="card bg-[#38518214] border-0 p-6 rounded-t-2xl rounded-e-2xl shadow-lg transition-all duration-300 overflow-hidden w-[90%] mx-auto h-[400px] flex flex-col">
+              <div class="flex justify-between items-center">
+                <h2 class="text-xl font-medium text-[#032342] ">Prostate</h2>
+                <div class="peginetion bg-[#385182] px-2.5 py-1.5 rounded-full transition-all duration-300">
+                  <i class="ri-arrow-right-up-line text-white"></i>
+                </div>
+              </div>
+              <p class="text-lg text-[#888888] mt-4 mb-4 flex-grow">
+                We are providing the cardiology services for our patients that are very much needed.
+              </p>
+              <img src="assets/images/Rectangle 4345 (1).png" alt="" class="w-full h-[250px] object-cover rounded-t-2xl rounded-e-2xl transition-all duration-300" />
+            </div>
+            <img src="assets/images/Group 1171275053.png" alt="" class="z-10 absolute bottom-0 left-0" />
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="card bg-[#38518214] border-0 p-6 rounded-t-2xl rounded-e-2xl shadow-lg transition-all duration-300 overflow-hidden w-[90%] mx-auto h-[400px] flex flex-col">
+              <div class="flex justify-between items-center">
+                <h2 class="text-xl font-medium text-[#032342] ">Uro Oncology</h2>
+                <div class="peginetion bg-[#385182] px-2.5 py-1.5 rounded-full transition-all duration-300">
+                  <i class="ri-arrow-right-up-line text-white"></i>
+                </div>
+              </div>
+              <p class="text-lg text-[#888888] mt-4 mb-4 flex-grow">
+                We are providing the cardiology services for our patients that are very much needed.
+              </p>
+              <img src="assets/images/Rectangle 4345 (2).png" alt="" class="w-full h-[250px] object-cover rounded-t-2xl rounded-e-2xl transition-all duration-300" />
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Custom Navigation Buttons -->
+      <div class="flex justify-between items-center my-6 px-4">
+        <div class="srvs_left flex items-center cursor-pointer">
+          <img src="assets/images/Group 1000003621.png" alt="Previous" />
+          <span class="text-lg text-primary pl-3">Previous</span>
+        </div>
+        <div class="srvs_right flex items-center cursor-pointer">
+          <span class="text-lg text-primary pr-3">Next</span>
+          <img src="assets/images/next.png" alt="Next" />
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <section id="our_doctors" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+            <!-- Left Column -->
+            <div class="w-full lg:w-1/2 lg:pe-5">
+                <span class="text-[#6285ca] px-9  text-md font-medium">O U R &nbsp D O C T O R</span>
+                <h2 class="text-4xl px-9 font-medium  text-[#032342] mb-4">
+                    Meet Our Professional <span class="text-primary">Expert <br> Doctor</span>
+                </h2>
+                <div class="flex rounded-2xl mt-40">
+                    <div class="w-[90%] p-14 relative">
+                        <img id="left-image" src="assets/images/purshdoctor.png" alt="Dr. Christopher Nicks" class="absolute -bottom-20 left-10 slider-image active">
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Right Column -->
+            <div class="w-full lg:w-1/2 lg:ps-5">
+                <div class="flex rounded-2xl p-8">
+                    <div class="w-[90%] relative">
+                        <img id="right-image" src="assets/images/mahiladoctor.png" class="w-full slider-image" alt="">
+                    </div>
+                </div>
+                <div class="right-0">
+                    <svg width="262" height="20" viewBox="0 0 262 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- SVG Path (unchanged) -->
+                    </svg>
+                </div>
+
+                <!-- Arrow Buttons with Sliding Animation -->
+                <div class="flex justify-center mt-4 relative">
+                    <!-- Left Arrow Button -->
+                    <div id="left-arrow" class="bg-[#6285ca] rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow-md hover:bg-[#385182] hover:shadow-lg transition duration-300 slide-left cursor-pointer">
+                        <i class="ri-arrow-left-line text-white text-xl"></i>
+                    </div>
+
+                    <!-- Right Arrow Button -->
+                    <div id="right-arrow" class="bg-white rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow-md hover:bg-[#6285ca] hover:shadow-lg transition duration-300 slide-right cursor-pointer">
+                        <i class="ri-arrow-right-up-line text-[#6285ca] hover:text-white text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+      <section id="testimonial" class="bg-[#f5f6f9] py-16">
+        <div class="container mx-auto px-4">
+          <!-- Testimonial Title -->
+          <div class="text-center my-5">
+            <span class="text-[#6285CA]  text-lg  font-medium">T E S T I M O N I A L</span>
+            <h3 class="text-5xl   font-medium   text-[#032342] mt-2 mb-12">
+              What Our <span class="text-[#385182]">Patient Says</span>
+            </h3>
+          </div>
+      
+          <!-- Testimonial Content -->
+          <div class="text-center">
+            <img src="assets/images/prfm.png" alt="Raymond Galario" class="w-36 h-36 mx-auto rounded-full" />
+            <h4 class="text-2xl font-medium   text-[#032342] mt-6 mb-2">Raymond Galario</h4>
+            <p class="text-lg text-[#888888] mb-0">Sydney, Australia</p>
+            <img src="assets/images/star.png" alt="Rating Stars" class="w-36 mx-auto my-5" />
+            <p class="text-xl text-[#032342]   w-full md:w-1/2 lg:w-1/2 mx-auto mb-8">
+              Now you can make an appointment with your doctor anywhere and anytime via online booking easier. Now you can make an appointment
+              with your doctor anywhere and anytime via online booking easier.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="c_us" class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <!-- Left Column -->
+            <div class="w-full lg:w-1/2 relative">
+              <!-- Partner Collaboration Box -->
+              <div class="absolute top-12 -left-5 bg-white w-40 p-5 rounded-2xl shadow-lg">
+                <h2 class="text-2xl">🤝</h2>
+                <h4 class="text-2xl font-normal "><b>25+</b></h4>
+                <p class="text-sm text-[#888888]  mb-0">Partner Collaboration</p>
+              </div>
+              <!-- Images -->
+              <img src="./assets/images/about-one-img-1.jpg.png" alt="About Us" class="w-full" />
+              <img src="./assets/images/Star 10.png" alt="Blur Star" class="absolute bottom-14 right-12 w-16" />
+            </div>
+      
+            <!-- Right Column -->
+            <div class="w-full lg:w-1/2 pt-12 lg:pt-0 lg:pl-8">
+              <span class="text-[#6285CA] text-lg  font-medium">C O N T A C T &nbsp; U S</span>
+              <h2 class="text-5xl font-medium  text-[#032342] mt-2 mb-4">
+                  <div class="flex flex-col">
+                      <div class="flex items-center">
+                          True  &nbsp<span class="text-primary"> Healthcare &nbsp</span> For Your
+                          <img src="assets/images/maskboy.png" alt="" class="ml-2">
+                      </div>
+                      <span>Family!</span>
+                  </div>
+              </h2>
+              <p class="text-xl text-[#888888] mb-4">
+                  Dhameliya Kidney Hospital has born out of the need for a good center which catered to patients with complicated kidney diseases in Surat. It is a judicious blend of high end technology, world class expertise and outstanding personalized care.
+              </p>
+              <h3 class="text-2xl  font-medium text-[#032342] mb-4">Our support services include:</h3>
+              <!-- Services List -->
+              <div class="flex mb-4">
+                <ul class="text-lg text-[#888888]  mr-4 list-disc pl-5">
+                    <li>ESWL - Lithotripsy</li>
+                    <li>Cystolitholapaxy</li>
+                    <li>HOLEP</li>
+                </ul>
+                <ul class="text-lg text-[#888888]  list-disc pl-5">
+                    <li>Endoscopic Surgery</li>
+                    <li>Open Surgery</li>
+                    <li>RIRS</li>
+                </ul>
+            </div>
+              <p class="text-xl text-[#888888] mb-8">
+                  Contact us today to learn more about our support services and to find out how we can help you.
+              </p>
+              <!-- Contact Button -->
+              <a href="#footer" class="hidden lg:inline-block bg-primary text-white border border-white rounded-xl px-6 py-2 text-lg font-medium transition duration-300 hover:bg-[#385182]">
+                  Contact Us <i class="fa-solid fa-arrow-right"></i>
+              </a>
+          </div>
+          </div>
+      
+          <!-- Services Image -->
+          <div class="text-center mt-16">
+            <img src="./assets/images/linn.png" alt="Services" class="inline-block cursor-pointer" />
+          </div>
+        </div>
+      </section>
+
+
+      <section id="help" class="bg-[#f5f6f9] py-16">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <!-- Left Column -->
+            <div class="w-full lg:w-1/2 lg:pr-12 pt-16">
+              <span class="text-[#6285ca] text-lg  font-medium">H E L P</span>
+              <h2 class="text-5xl font-medium   text-[#032342] mt-2 mb-4">
+                A <span class="text-[#385182]">Dialysis Patient’s</span> Life Is  <br>Hard. Laugh Harder.
+              </h2>
+              <h3 class="text-2xl font-medium  text-[#032342] mb-4">Our support services include:</h3>
+              <p class="text-lg text-[#888888] mb-4">
+                Today the hospital is recognised as a world-renowned institution, not only providing outstanding care and treatment, our goal is to deliver quality care in a respectful & compassionate manner. We strive to be the first and best choice for healthcare.
+              </p>
+              <ul class="text-base  text-[#888888]">
+                <li class="py-2">A family history of stone disease</li>
+                <li class="py-2">Stones caused by an infection in your urinary system</li>
+                <li class="py-2">A genetic condition which makes you prone to forming stones</li>
+                <li class="py-2">A cyst or a condition called calyceal diverticulum</li>
+                <li class="py-2">Swelling in one of your ureters, called ureterocele</li>
+              </ul>
+            </div>
+      
+            <!-- Right Column -->
+            <div class="w-full lg:w-1/2 bg-white rounded-3xl p-8 mt-8 lg:mt-0">
+              <!-- Form Submission Message -->
+              <div id="submissionMessage" class="hidden items-center justify-center h-full text-center">
+                <span class="text-4xl font-bold">Your Form is successfully Submitted. Thank You.</span>
+              </div>
+      
+              <!-- Form -->
+              <div id="formContent">
+                <h2 class="text-4xl  text-[#032342] mb-4" style="font-weight: 500;">How Can We Help?</h2>
+                <p class="text-lg text-[#888888] mb-6">
+                  Please feel welcome to contact our friendly reception staff with any general or medical enquiry. Our doctors will receive or return any urgent calls.
+                </p>
+                <form id="helpForm" class="space-y-4">
+                  <div class="col col-span-2 flex">
+                    <input type="text" placeholder="Name" class="w-full lg:w-[48%] mx-2 p-4 rounded-xl bg-[#e6e9ef] outline-none" />
+                    <input type="email" placeholder="Email" class="w-full lg:w-[48%] mx-2 p-4 rounded-xl bg-[#e6e9ef] outline-none" />
+                  </div>
+                  <div class="col col-span-2 flex">
+                    <input type="tel" placeholder="Phone number" class="w-full lg:w-[48%] mx-2 p-4 rounded-xl bg-[#e6e9ef] outline-none" />
+                    <input type="text" placeholder="Subject" class="w-full lg:w-[48%] mx-2 p-4 rounded-xl bg-[#e6e9ef] outline-none" />
+                  </div>
+                  <textarea placeholder="Message" rows="6" class="w-full p-4 rounded-xl bg-[#e6e9ef] outline-none"></textarea>
+                  <button type="submit" class="w-full lg:w-[48%] py-3 px-6 bg-primary text-white rounded-xl font-medium text-lg transition duration-300 hover:bg-[#385182]">
+                    Submit Request <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-12 md:py-16 lg:py-20">
+        <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+          <!-- Heading Section -->
+          <div class="flex flex-col items-center space-y-4 text-center">
+            <p class="text-lg font-medium tracking-wider  text-[#6285CA] uppercase">OUR BLOGS</p>
+            <h2 class="text-5xl font-medium tracking-tight  sm:text-4xl md:text-5xl">
+              Latest <span class="text-[#385182]">News</span>
+            </h2>
+          </div>
+      
+          <!-- Featured Posts Grid -->
+          <div class="flex gap-8 mt-12 w-full">
+            <!-- Featured Post 1 (55% width) -->
+            <article class="w-[55%] group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <a href="#" class="flex">
+                <div class="p-4">
+                  <img
+                    src="assets/images/news_sec1.png"
+                    alt="X-ray showing a broken bone"
+                    width="350"
+                    class="object-cover transition-transform duration-200 group-hover:scale-110 rounded-lg"
+                  />
+                </div>
+                <div class="p-6 flex-1">
+                  <h3 class="text-3xl font-medium  text-[#032342] mb-2">What To Do When You Break <br> A Bone?</h3>
+                  <p class="text-gray-600 text-lg  mb-4">
+                    Breaking a bone is a serious and scary situation that can happen to anyone in a number of different
+                    ways. The most <br> common way a bone...
+                  </p>
+                  <p class="text-gray-600 text-lg  mb-4">Bone breaks are categorized into different types of fractures... <span class="text-[#6285CA]"> Read More </span></p>
+                 
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="assets/images/news_prof.png"
+                      alt="James Williams avatar"
+                      width="40"
+                      height="40"
+                      class="rounded-full"
+                    />
+                    <div>
+                      <p class="font-medium  text-gray-900">James Williams</p>
+                      <p class="text-sm text-gray-500">October 22, 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          
+            <!-- Featured Post 2 (45% width) -->
+            <article class="w-[45%] group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <a href="#" class="block">
+                <div class="p-4">
+                  <img
+                    src="assets/images/news_sec2.png"
+                    alt="Doctor examining bones"
+                    width="400"
+                    class="w-full object-cover transition-transform duration-200 group-hover:scale-110 rounded-lg"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-medium  text-[#032342] mb-2">What To Do When You Break A Bone?</h3>
+                  <p class="text-gray-600  mb-4">The most common way a bone...</p>
+                  <div class="flex items-center space-x-4">
+                    <img
+                      src="assets/images/news_prof.png"
+                      alt="James Williams avatar"
+                      height="40"
+                      class="rounded-full"
+                    />
+                    <div>
+                      <p class="font-medium  text-[#032342]">James Williams</p>
+                      <p class="text-sm text-gray-500">October 22, 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+      
+          <!-- Smaller Posts Grid -->
+          <div class="grid gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Smaller Post 1 -->
+            <article class="group relative overflow-hidden rounded-3xl shadow-lg h-48 hover:shadow-2xl transition-shadow duration-300">
+              <a href="#" class="flex">
+                <div class="p-4">
+                  <img
+                    src="assets/images/news22+.png"
+                    alt="Medical related image"
+                    width="220"
+                    height="220"
+                    class="w-36 h-36 object-cover transition-transform duration-200 rounded-3xl group-hover:scale-110"
+                  />
+                </div>
+                <div class="p-4 flex-1">
+                  <h3 class="text-3xl font-medium   text-[#032342] mb-2">When To See A Doctor For...</h3>
+                  <div class="flex items-center justify-between  ">
+                    <span class="text-[#6285CA]    text-lg font-medium">Read More</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="12" fill="#E8EDF7"/>
+                      <path d="M10.627 9.15295L14.6932 9.15295L14.6932 13.2192" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 14.8472L14.6371 9.21004" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </article>
+      
+            <!-- Smaller Post 2 -->
+            <article class="group relative overflow-hidden rounded-3xl shadow-lg h-48 hover:shadow-2xl transition-shadow duration-300">
+              <a href="#" class="flex">
+                <div class="p-4">
+                  <img
+                    src="assets/images/newsec3.png"
+                    alt="Medical related image"
+                    width="220"
+                    height="220"
+                    class="w-36 h-36 object-cover transition-transform duration-200 group-hover:scale-110 rounded-3xl"
+                  />
+                </div>
+                <div class="p-4 flex-1">
+                  <h3 class="text-3xl font-medium   text-[#032342] mb-2">When To See A Doctor For...</h3>
+                  <div class="flex items-center justify-between  ">
+                    <span class="text-[#6285CA]    text-lg font-medium">Read More</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="12" fill="#E8EDF7"/>
+                      <path d="M10.627 9.15295L14.6932 9.15295L14.6932 13.2192" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 14.8472L14.6371 9.21004" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </article>
+      
+            <!-- Smaller Post 3 -->
+            <article class="group relative overflow-hidden rounded-3xl shadow-lg h-48 hover:shadow-2xl transition-shadow duration-300">
+              <a href="#" class="flex">
+                <div class="p-4">
+                  <img
+                    src="assets/images/newssec4.png"
+                    alt="Medical related image"
+                    width="220"
+                    height="220"
+                    class="w-36 h-36 object-cover transition-transform duration-200 group-hover:scale-110 rounded-3xl"
+                  />
+                </div>
+                <div class="p-4 flex-1">
+                  <h3 class="text-3xl font-medium   text-[#032342] mb-2">When To See A Doctor For...</h3>
+                  <div class="flex items-center justify-between  ">
+                    <span class="text-[#6285CA]    text-lg font-medium">Read More</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="12" fill="#E8EDF7"/>
+                      <path d="M10.627 9.15295L14.6932 9.15295L14.6932 13.2192" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 14.8472L14.6371 9.21004" stroke="#385182" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+      
+          <!-- View More Button -->
+          <div class="flex justify-center mt-12">
+            <button class="inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-[#032342] border border-[#032342] rounded-md hover:bg-[#032342] hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              View More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-24 flex flex-col items-center justify-center">
+        <div class="container p-10 bg-cover bg-center text-center rounded-[18px] bg-[#385182]" style="background-image: url('assets/images/linenews.png');">
+          <div class="newsletter_content">
+            <h2 class="text-white text-5xl font-medium mb-5">Newsletter</h2>
+            <span class="text-white text-2xl font-medium">Get Smarter About No-Code</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+            </svg>
+            <div class="flex items-center justify-center my-4">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+              <p class="text-[#AFB9CD] text-base mx-2" style="color: #AFB9CD;">
+                The best No-Code tips & tricks, for webflow & Framer developers from <br>experts to beginner. Join our 3k community by subscribing
+              </p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="flex justify-center mt-4">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                class="text-white text-lg px-3 py-2 rounded-[10px] outline-none border border-[#8f9db8] bg-[#445b89] placeholder:text-white"
+              />
+              <a
+                href="#subscribe"
+                class="subscribe_btn inline-block border border-[#032342] text-[#385182] bg-white rounded-[12px] px-6 py-3 text-lg font-medium transition duration-300 hover:bg-[#6285ca] hover:text-white ml-3"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" class="bg-[#032342] text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="f_left">
+                        <h4 class="text-4xl font-medium mb-5">Dhameliya Kidney Hospital</h4>
+                        <p class="text-lg mb-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim laboriosam eius voluptate ipsam, error fugit praesentium aut modi. Rerum obcaecati deleniti laboriosam nesciunt nisi
+                        </p>
+                        <div class="flex space-x-5">
+                            <i class="ri-facebook-circle-fill text-2xl"></i>
+                            <i class="ri-instagram-fill text-2xl"></i>
+                            <i class="ri-linkedin-box-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Middle Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="mid_footer">
+                        <h5 class="text-2xl font-medium mb-8">Get in Touch</h5>
+                        <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                        <p class="text-lg mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur omnis adipisci</p>
+                        <div class="phone pt-4 flex items-center">
+                            <i class="ri-phone-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            <span class="text-lg">+91 261 2490001</span>
+                        </div>
+                        <div class="flex items-center py-4">
+                            <div class="location">
+                                <i class="ri-map-pin-2-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            </div>
+                            <span class="text-lg">402, Aayush Doctor House, Lal Darwaja, Station Road, SURAT 395002-GUJ INDIA</span>
+                        </div>
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Get Direction <i class="ri-arrow-right-line"></i></a>
+                        <br />
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Our Branches <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Right Section -->
+                <div class="col-span-1">
+                    <div class="footerRight">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Medical Services</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="m_services space-y-3">
+                                    <li class="text-lg icon-list">Kidney Stone</li>
+                                    <li class="text-lg icon-list">Prostate</li>
+                                    <li class="text-lg icon-list">Uro Oncology</li>
+                                    <li class="text-lg icon-list">Paediatric Urology</li>
+                                    <li class="text-lg icon-list">Female Urology</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Quick Links</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="q_services space-y-3">
+                                    <li class="text-lg icon-list">Home</li>
+                                    <li class="text-lg icon-list">About Us</li>
+                                    <li class="text-lg icon-list">Medical Services</li>
+                                    <li class="text-lg icon-list">Testimonials</li>
+                                    <li class="text-lg icon-list">Contact Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Line -->
+            <div class="border-t border-white my-10"></div>
+    
+            <!-- Copyright -->
+            <p class="text-center text-xl">Non Copyrighted @ 2022 Designed and uploaded by Dhameliya Kidney Hospital</p>
+        </div>
+    </footer>
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+       document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true, // Enable looping
+    slidesPerView: 1, // Always show 1 slide on mobile
+    spaceBetween: 20, // Space between slides
+    grabCursor: true, // Show grab cursor on hover
+    breakpoints: {
+      // When window width is >= 768px (tablets)
+      768: {
+        slidesPerView: 2, // Show 2 slides on tablets
+      },
+      // When window width is >= 1024px (desktop)
+      1024: {
+        slidesPerView: 3, // Show 3 slides on desktop
+      },
+    },
+  });
+
+  // Add event listeners to custom navigation buttons
+  document.querySelector('.srvs_left').addEventListener('click', () => {
+    swiper.slidePrev(); // Go to the previous slide
+  });
+
+  document.querySelector('.srvs_right').addEventListener('click', () => {
+    swiper.slideNext(); // Go to the next slide
+  });
+});
+      </script>
+</body>
+</html>     

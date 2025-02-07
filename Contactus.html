@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo770 1.png" />
+
+    <title>Dhameliya Kidney Hospital</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fredoka Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Apply Fredoka font to the heading */
+        .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Custom color for the word "good" */
+        .text-custom-blue {
+            color: #6285CA;
+        }
+    </style>
+</head>
+<body class="m-0 font-sans antialiased font-fredoka ">
+    <!-- Header -->
+    <header id="header" class="py-8 bg-[#E6E9EF] relative">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Logo and Hospital Name -->
+          <div class="flex items-center">
+              <a href="javascript:void(0)" class="flex items-center">
+                  <img src="assets/images/logo770 1.png" alt="Logo" class="mr-4">
+                  <img src="assets/images/Dhameliya Kidney Hospital.png" alt="Dhameliya Kidney Hospital" class="h-12">
+              </a>
+          </div>
+  
+          <!-- Navigation Menu -->
+          <nav id="navbar" class="navbar">
+              <ul class="flex space-x-4 list-none p-0 m-0 items-center">
+                  <li><a href="index.html" class="nav-link scrollto active px-4 py-2 text-primary hover:text-primary transition duration-300">Home</a></li>
+                  <li><a href="About.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">About</a></li>
+                  <li class="dropdown relative">
+                      <a href="Medical_services.html" class="flex items-center px-4 py-2 text-primary hover:text-primary transition duration-300">
+                          <span>Medical services</span>
+                          <i class="ri-arrow-down-s-line ml-1"></i>
+                      </a>
+                      <ul class="dropdown-menu absolute left-0 top-full mt-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 1</a></li>
+                          <li class="dropdown relative">
+                              <a href="javascript:void(0)" class="flex items-center px-5 py-2 text-primary hover:bg-gray-200">
+                                  <span>Service 2</span>
+                                  <i class="ri-arrow-right-s-line ml-auto"></i>
+                              </a>
+                              <ul class="dropdown-menu absolute left-full top-0 ml-2 bg-gray-100 shadow-lg rounded-lg opacity-0 invisible transition duration-300 min-w-[200px]">
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 1</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 2</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 3</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 4</a></li>
+                                  <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Sub Service 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 3</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 4</a></li>
+                          <li><a href="javascript:void(0)" class="block px-5 py-2 text-primary hover:bg-gray-200">Service 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="careear.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Career</a></li>
+                  <li><a href="News.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">News</a></li>
+                  <li><a href="Contactus.html" class="nav-link scrollto px-4 py-2 text-primary hover:text-primary transition duration-300">Contact</a></li>
+              </ul>
+          </nav>
+           
+           <div class="flex items-center">   
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.1499 15.9751C15.0624 15.9626 14.9499 15.9626 14.8499 15.9751C12.6499 15.9001 10.8999 14.1001 10.8999 11.8876C10.8999 9.6251 12.7249 7.7876 14.9999 7.7876C17.2624 7.7876 19.0999 9.6251 19.0999 11.8876C19.0874 14.1001 17.3499 15.9001 15.1499 15.9751Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.4252 24.2252C21.2002 26.2627 18.2502 27.5002 15.0002 27.5002C11.7502 27.5002 8.8002 26.2627 6.5752 24.2252C6.7002 23.0502 7.4502 21.9002 8.7877 21.0002C12.2127 18.7252 17.8127 18.7252 21.2127 21.0002C22.5502 21.9002 23.3002 23.0502 23.4252 24.2252Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="#032342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      
+       
+          <!-- Make Appointment Button -->
+          <a href="#help" class="bg-primary text-white border border-primary rounded-lg px-6 py-2 ml-6 hover:bg-primary-dark transition duration-300 hidden lg:inline-block">
+              Make Appointment
+          </a>
+           </div>
+          <!-- Mobile Nav Toggle -->
+          <i class="ri-menu-fill text-primary text-2xl cursor-pointer lg:hidden"></i>
+      </div>
+  
+      <!-- Pseudo-element to extend the header background -->
+      <div class="header-bg-extension"></div>
+  
+      <!-- Floating Image on the Left Side -->
+      <img src="assets/images/helthkit.png" alt="Floating Image" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Round Shape -->
+      <div class="absolute bg-[#FA7E8E] rounded-full h-4 w-4" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;"></div>
+  
+      <!-- Floating Image on the Right Side -->
+      <img src="assets/images/kidney.png" alt="Floating Image" class="absolute right-20 top-32   transform  -translate-y-1/2 h-16 w-16" style="z-index: 10;">
+  
+      <!-- Small Blue Dot -->
+      <div class="absolute bg-blue-500 rounded-full h-4 w-4" style="top: 50%; right: 0; transform: translate(-50%, -50%); z-index: 10;"></div>
+  </header>
+  
+  <section class="relative">
+      <!-- Half Background Color -->
+      <div class="absolute inset-0 bg-[#E6E9EF]" style="height: 50%; z-index: -1;"></div>
+  
+      <!-- Hero Section -->
+      <div class="relative mx-auto overflow-hidden" style="max-width: 1200px; height: 200px; border-radius: 100px;">
+          <!-- Background Image -->
+          <div class="absolute inset-0 bg-cover bg-center"
+              style="background-image: url('./assets/images/heroimgsec.png'); background-position: center 35%; border-radius: 100px;">
+          </div>
+          <!-- Light Blue Overlay (Now Rounded) -->
+          <div class="absolute inset-0 bg-blue-900 opacity-50" style="border-radius: 100px;"></div>
+          <!-- Content -->
+          <div class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-white">
+              <h1 class="text-4xl  font-medium mb-4">Contact Us</h1>
+              <div class="flex items-center gap-2">
+                  <a href="index.html" class="hover:underline ">Home</a>
+                  <span>•</span>
+                  <span class="">Contact Us</span>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section class="container mx-auto px-4 py-12  al">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <p class="text-[#6285CA]   font-medium mb-2">G E T &nbsp; I N &nbsp; T O U C H</p>
+          <h1 class="text-[#032342]  text-4xl font-semibold">Dhameliya <span class="text-[#385182]"> Kidney Hospital </span></h1>
+        </div>
+                     
+        <!-- Grid Layout -->
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <!-- Left Column: Contact Details -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-[#385182]  font-medium text-2xl">Dhameliya Kidney Hospital</h2>
+              <p class="text-[#6285CA]  font-medium text-3xl font-weight-[500]">- Station Road</p>
+            </div>
+      
+            <div class="ml-14 ">
+              <h3 class="text-3xl  font-medium  mb-3">Quick Contacts</h3>
+              <p class="text-gray-600  mb-8">
+                Please feel free to contact our friendly staff with <br> any medical enquiry.
+              </p>
+      
+              <!-- Contact Info -->
+              <div class="space-y-6">
+                <!-- Phone -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-[#E8EDF7] flex items-center justify-center flex-shrink-0">
+                      <!-- Phone Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2002 13.8L8.49247 15.5077C8.13247 15.8677 7.56016 15.8677 7.19093 15.517C7.08939 15.4154 6.98785 15.3231 6.88631 15.2216C5.93554 14.2616 5.07708 13.2554 4.31093 12.2031C3.55401 11.1508 2.94477 10.0985 2.5017 9.05542C2.06785 8.00311 1.84631 6.99696 1.84631 6.03696C1.84631 5.40927 1.95708 4.80927 2.17862 4.25542C2.40016 3.69235 2.75093 3.17542 3.24016 2.71388C3.83093 2.13235 4.47708 1.84619 5.16016 1.84619C5.41862 1.84619 5.67708 1.90158 5.90785 2.01235C6.14785 2.12311 6.36016 2.28927 6.52631 2.52927L8.66785 5.54773C8.83401 5.7785 8.95401 5.99081 9.03708 6.19388C9.12016 6.38773 9.16631 6.58158 9.16631 6.75696C9.16631 6.9785 9.1017 7.20004 8.97247 7.41234C8.85247 7.62465 8.67708 7.84619 8.45554 8.06773L7.754 8.79696C7.65247 8.8985 7.60631 9.0185 7.60631 9.16619C7.60631 9.24004 7.61554 9.30465 7.63401 9.3785C7.6617 9.45235 7.68939 9.50773 7.70785 9.56311C7.87401 9.86773 8.16016 10.2647 8.56631 10.7447C8.9817 11.2247 9.42477 11.7139 9.90477 12.2031C9.99708 12.2954 10.0986 12.3877 10.1909 12.48C10.5602 12.84 10.5694 13.4308 10.2002 13.8Z" fill="#385182"/>
+                        <path d="M20.2802 16.92C20.2802 17.1784 20.234 17.4461 20.1417 17.7046C20.114 17.7784 20.0863 17.8523 20.0494 17.9261C19.8925 18.2584 19.6894 18.5723 19.4217 18.8677C18.9694 19.3661 18.4709 19.7261 17.9078 19.9569C17.8986 19.9569 17.8894 19.9661 17.8802 19.9661C17.3355 20.1877 16.7448 20.3077 16.1078 20.3077C15.1663 20.3077 14.1602 20.0861 13.0986 19.6338C12.0371 19.1815 10.9755 18.5723 9.92323 17.8061C9.56323 17.5384 9.20323 17.2707 8.86169 16.9846L11.8802 13.9661C12.1386 14.16 12.3694 14.3077 12.5632 14.4092C12.6094 14.4277 12.6648 14.4553 12.7294 14.483C12.8032 14.5107 12.8771 14.52 12.9602 14.52C13.1171 14.52 13.2371 14.4646 13.3386 14.363L14.0402 13.6707C14.2709 13.44 14.4925 13.2646 14.7048 13.1538C14.9171 13.0246 15.1294 12.96 15.3602 12.96C15.5355 12.96 15.7202 12.9969 15.9232 13.08C16.1263 13.163 16.3386 13.283 16.5694 13.44L19.6248 15.6092C19.8648 15.7753 20.0309 15.9692 20.1325 16.2C20.2248 16.4307 20.2802 16.6615 20.2802 16.92Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">Contact</h4>
+                      <p class="text-gray-600">+91 9913225927</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] w-20 hover:bg-[#2a3d5e]  text-white hover:text-[#032342] px-4 py-2 rounded-full ml-14" style="background-color: #032342;  ">
+                    Call
+                  </button>
+                </div>
+              
+                <!-- Address -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- MapPin Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0299 7.79853C18.0609 3.53466 14.3415 1.61499 11.0744 1.61499C11.0744 1.61499 11.0744 1.61499 11.0652 1.61499C7.80726 1.61499 4.07868 3.52543 3.10962 7.7893C2.0298 12.5516 4.94622 16.5847 7.58576 19.1227C8.56405 20.0641 9.81922 20.5348 11.0744 20.5348C12.3296 20.5348 13.5847 20.0641 14.5538 19.1227C17.1933 16.5847 20.1097 12.5608 19.0299 7.79853ZM11.0744 12.4223C9.46851 12.4223 8.1672 11.121 8.1672 9.51516C8.1672 7.90928 9.46851 6.60797 11.0744 6.60797C12.6803 6.60797 13.9816 7.90928 13.9816 9.51516C13.9816 11.121 12.6803 12.4223 11.0744 12.4223Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342]">Address</h4>
+                     
+                      <p class="text-gray-600">
+                        402, Aayush Doctor House, Lal Darwaja,<br />
+                        Station Road, SURAT 395 002 - GUJ INDIA
+                      </p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style="background-color:#032342 ;">
+                    Location
+                  </button>
+                </div>
+              
+                <!-- Email -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- Mail Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6896 3.23022H6.46041C3.69166 3.23022 1.84583 4.6146 1.84583 7.84481V14.3052C1.84583 17.5354 3.69166 18.9198 6.46041 18.9198H15.6896C18.4583 18.9198 20.3042 17.5354 20.3042 14.3052V7.84481C20.3042 4.6146 18.4583 3.23022 15.6896 3.23022ZM16.1233 8.85079L13.2346 11.1581C12.6255 11.6472 11.8502 11.8872 11.075 11.8872C10.2997 11.8872 9.51526 11.6472 8.91537 11.1581L6.02664 8.85079C5.7313 8.61083 5.68516 8.16783 5.91589 7.8725C6.15585 7.57716 6.58962 7.52179 6.88495 7.76175L9.77368 10.069C10.4751 10.632 11.6657 10.632 12.3671 10.069L15.2558 7.76175C15.5511 7.52179 15.9941 7.56793 16.2249 7.8725C16.4648 8.16783 16.4187 8.61083 16.1233 8.85079Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">E-Mail</h4>
+                      <p class="text-gray-600">arvind.dhameliya@ahoo.in</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style=" background-color: #032342;">
+                    Send Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Column: Google Map -->
+          <div class="rounded-3xl overflow-hidden shadow-lg bg-white p-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7307406472604!2d72.83646081493443!3d21.195537985907523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e7a6f824a81%3A0x8c4c4b7c4c4c4b7c!2sDhameliya%20Kidney%20Hospital!5e0!3m2!1sen!2sin!4v1620147647947!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              class="rounded-2xl"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <div class="w-full flex justify-center    ">
+        <img
+          src="assets/images/—Pngtree—creative simple dividing line_5054140 1.png"
+          alt=""
+        />
+      </div>
+
+      <section class="container mx-auto px-4 py-12">
+        <!-- Header -->
+       
+      
+        <!-- Grid Layout -->
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <!-- Left Column: Google Map -->
+          <div class="rounded-3xl overflow-hidden shadow-lg bg-white p-2 order-last lg:order-first">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7307406472604!2d72.83646081493443!3d21.195537985907523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e7a6f824a81%3A0x8c4c4b7c4c4c4b7c!2sDhameliya%20Kidney%20Hospital!5e0!3m2!1sen!2sin!4v1620147647947!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              class="rounded-2xl"
+            ></iframe>
+          </div>
+      
+          <!-- Right Column: Contact Details -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-[#385182]   text-2xl font-medium">Dhameliya Kidney Hospital</h2>
+              <p class="text-[#6285CA]  font-medium text-3xl font-weight-[500]">- Adajan</p>
+            </div>
+      
+            <div class="ml-14 ">
+              <h3 class="text-3xl  font-medium  mb-3">Quick Contacts</h3>
+              <p class="text-gray-600  mb-8">
+                Please feel free to contact our friendly staff with <br> any medical enquiry.
+              </p>
+      
+              <!-- Contact Info -->
+              <div class="space-y-6">
+                <!-- Phone -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-[#E8EDF7] flex items-center justify-center flex-shrink-0">
+                      <!-- Phone Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2002 13.8L8.49247 15.5077C8.13247 15.8677 7.56016 15.8677 7.19093 15.517C7.08939 15.4154 6.98785 15.3231 6.88631 15.2216C5.93554 14.2616 5.07708 13.2554 4.31093 12.2031C3.55401 11.1508 2.94477 10.0985 2.5017 9.05542C2.06785 8.00311 1.84631 6.99696 1.84631 6.03696C1.84631 5.40927 1.95708 4.80927 2.17862 4.25542C2.40016 3.69235 2.75093 3.17542 3.24016 2.71388C3.83093 2.13235 4.47708 1.84619 5.16016 1.84619C5.41862 1.84619 5.67708 1.90158 5.90785 2.01235C6.14785 2.12311 6.36016 2.28927 6.52631 2.52927L8.66785 5.54773C8.83401 5.7785 8.95401 5.99081 9.03708 6.19388C9.12016 6.38773 9.16631 6.58158 9.16631 6.75696C9.16631 6.9785 9.1017 7.20004 8.97247 7.41234C8.85247 7.62465 8.67708 7.84619 8.45554 8.06773L7.754 8.79696C7.65247 8.8985 7.60631 9.0185 7.60631 9.16619C7.60631 9.24004 7.61554 9.30465 7.63401 9.3785C7.6617 9.45235 7.68939 9.50773 7.70785 9.56311C7.87401 9.86773 8.16016 10.2647 8.56631 10.7447C8.9817 11.2247 9.42477 11.7139 9.90477 12.2031C9.99708 12.2954 10.0986 12.3877 10.1909 12.48C10.5602 12.84 10.5694 13.4308 10.2002 13.8Z" fill="#385182"/>
+                        <path d="M20.2802 16.92C20.2802 17.1784 20.234 17.4461 20.1417 17.7046C20.114 17.7784 20.0863 17.8523 20.0494 17.9261C19.8925 18.2584 19.6894 18.5723 19.4217 18.8677C18.9694 19.3661 18.4709 19.7261 17.9078 19.9569C17.8986 19.9569 17.8894 19.9661 17.8802 19.9661C17.3355 20.1877 16.7448 20.3077 16.1078 20.3077C15.1663 20.3077 14.1602 20.0861 13.0986 19.6338C12.0371 19.1815 10.9755 18.5723 9.92323 17.8061C9.56323 17.5384 9.20323 17.2707 8.86169 16.9846L11.8802 13.9661C12.1386 14.16 12.3694 14.3077 12.5632 14.4092C12.6094 14.4277 12.6648 14.4553 12.7294 14.483C12.8032 14.5107 12.8771 14.52 12.9602 14.52C13.1171 14.52 13.2371 14.4646 13.3386 14.363L14.0402 13.6707C14.2709 13.44 14.4925 13.2646 14.7048 13.1538C14.9171 13.0246 15.1294 12.96 15.3602 12.96C15.5355 12.96 15.7202 12.9969 15.9232 13.08C16.1263 13.163 16.3386 13.283 16.5694 13.44L19.6248 15.6092C19.8648 15.7753 20.0309 15.9692 20.1325 16.2C20.2248 16.4307 20.2802 16.6615 20.2802 16.92Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">Contact</h4>
+                      <p class="text-gray-600">+91 9913225927</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] w-20 hover:bg-[#2a3d5e]  text-white hover:text-[#032342] px-4 py-2 rounded-full ml-14" style="background-color: #032342;  ">
+                    Call
+                  </button>
+                </div>
+              
+                <!-- Address -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- MapPin Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0299 7.79853C18.0609 3.53466 14.3415 1.61499 11.0744 1.61499C11.0744 1.61499 11.0744 1.61499 11.0652 1.61499C7.80726 1.61499 4.07868 3.52543 3.10962 7.7893C2.0298 12.5516 4.94622 16.5847 7.58576 19.1227C8.56405 20.0641 9.81922 20.5348 11.0744 20.5348C12.3296 20.5348 13.5847 20.0641 14.5538 19.1227C17.1933 16.5847 20.1097 12.5608 19.0299 7.79853ZM11.0744 12.4223C9.46851 12.4223 8.1672 11.121 8.1672 9.51516C8.1672 7.90928 9.46851 6.60797 11.0744 6.60797C12.6803 6.60797 13.9816 7.90928 13.9816 9.51516C13.9816 11.121 12.6803 12.4223 11.0744 12.4223Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342]">Address</h4>
+                      <p class="text-gray-600">
+                        402, Aayush Doctor House, Lal Darwaja,<br />
+                        Station Road, SURAT 395 002 - GUJ INDIA
+                      </p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style="background-color:#032342 ;">
+                    Location
+                  </button>
+                </div>
+              
+                <!-- Email -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- Mail Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6896 3.23022H6.46041C3.69166 3.23022 1.84583 4.6146 1.84583 7.84481V14.3052C1.84583 17.5354 3.69166 18.9198 6.46041 18.9198H15.6896C18.4583 18.9198 20.3042 17.5354 20.3042 14.3052V7.84481C20.3042 4.6146 18.4583 3.23022 15.6896 3.23022ZM16.1233 8.85079L13.2346 11.1581C12.6255 11.6472 11.8502 11.8872 11.075 11.8872C10.2997 11.8872 9.51526 11.6472 8.91537 11.1581L6.02664 8.85079C5.7313 8.61083 5.68516 8.16783 5.91589 7.8725C6.15585 7.57716 6.58962 7.52179 6.88495 7.76175L9.77368 10.069C10.4751 10.632 11.6657 10.632 12.3671 10.069L15.2558 7.76175C15.5511 7.52179 15.9941 7.56793 16.2249 7.8725C16.4648 8.16783 16.4187 8.61083 16.1233 8.85079Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">E-Mail</h4>
+                      <p class="text-gray-600">arvind.dhameliya@ahoo.in</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style=" background-color: #032342;">
+                    Send Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="w-full flex justify-center    ">
+        <img
+          src="assets/images/—Pngtree—creative simple dividing line_5054140 1.png"
+          alt=""
+        />
+      </div>
+      <section class="container mx-auto px-4 py-12  al">
+        <!-- Header -->
+       
+      
+        <!-- Grid Layout -->
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <!-- Left Column: Contact Details -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-[#385182]  text-2xl font-medium">Dhameliya Kidney Hospital</h2>
+              <p class="text-[#6285CA]  font-medium text-3xl font-weight-[500]">- Station Road</p>
+            </div>
+      
+            <div class="ml-14 ">
+              <h3 class="text-3xl  font-medium  mb-3">Quick Contacts</h3>
+              <p class="text-gray-600  mb-8">
+                Please feel free to contact our friendly staff with <br> any medical enquiry.
+              </p>
+      
+              <!-- Contact Info -->
+              <div class="space-y-6">
+                <!-- Phone -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-[#E8EDF7] flex items-center justify-center flex-shrink-0">
+                      <!-- Phone Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2002 13.8L8.49247 15.5077C8.13247 15.8677 7.56016 15.8677 7.19093 15.517C7.08939 15.4154 6.98785 15.3231 6.88631 15.2216C5.93554 14.2616 5.07708 13.2554 4.31093 12.2031C3.55401 11.1508 2.94477 10.0985 2.5017 9.05542C2.06785 8.00311 1.84631 6.99696 1.84631 6.03696C1.84631 5.40927 1.95708 4.80927 2.17862 4.25542C2.40016 3.69235 2.75093 3.17542 3.24016 2.71388C3.83093 2.13235 4.47708 1.84619 5.16016 1.84619C5.41862 1.84619 5.67708 1.90158 5.90785 2.01235C6.14785 2.12311 6.36016 2.28927 6.52631 2.52927L8.66785 5.54773C8.83401 5.7785 8.95401 5.99081 9.03708 6.19388C9.12016 6.38773 9.16631 6.58158 9.16631 6.75696C9.16631 6.9785 9.1017 7.20004 8.97247 7.41234C8.85247 7.62465 8.67708 7.84619 8.45554 8.06773L7.754 8.79696C7.65247 8.8985 7.60631 9.0185 7.60631 9.16619C7.60631 9.24004 7.61554 9.30465 7.63401 9.3785C7.6617 9.45235 7.68939 9.50773 7.70785 9.56311C7.87401 9.86773 8.16016 10.2647 8.56631 10.7447C8.9817 11.2247 9.42477 11.7139 9.90477 12.2031C9.99708 12.2954 10.0986 12.3877 10.1909 12.48C10.5602 12.84 10.5694 13.4308 10.2002 13.8Z" fill="#385182"/>
+                        <path d="M20.2802 16.92C20.2802 17.1784 20.234 17.4461 20.1417 17.7046C20.114 17.7784 20.0863 17.8523 20.0494 17.9261C19.8925 18.2584 19.6894 18.5723 19.4217 18.8677C18.9694 19.3661 18.4709 19.7261 17.9078 19.9569C17.8986 19.9569 17.8894 19.9661 17.8802 19.9661C17.3355 20.1877 16.7448 20.3077 16.1078 20.3077C15.1663 20.3077 14.1602 20.0861 13.0986 19.6338C12.0371 19.1815 10.9755 18.5723 9.92323 17.8061C9.56323 17.5384 9.20323 17.2707 8.86169 16.9846L11.8802 13.9661C12.1386 14.16 12.3694 14.3077 12.5632 14.4092C12.6094 14.4277 12.6648 14.4553 12.7294 14.483C12.8032 14.5107 12.8771 14.52 12.9602 14.52C13.1171 14.52 13.2371 14.4646 13.3386 14.363L14.0402 13.6707C14.2709 13.44 14.4925 13.2646 14.7048 13.1538C14.9171 13.0246 15.1294 12.96 15.3602 12.96C15.5355 12.96 15.7202 12.9969 15.9232 13.08C16.1263 13.163 16.3386 13.283 16.5694 13.44L19.6248 15.6092C19.8648 15.7753 20.0309 15.9692 20.1325 16.2C20.2248 16.4307 20.2802 16.6615 20.2802 16.92Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">Contact</h4>
+                      <p class="text-gray-600">+91 9913225927</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] w-20 hover:bg-[#2a3d5e]  text-white hover:text-[#032342] px-4 py-2 rounded-full ml-14" style="background-color: #032342;  ">
+                    Call
+                  </button>
+                </div>
+              
+                <!-- Address -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- MapPin Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0299 7.79853C18.0609 3.53466 14.3415 1.61499 11.0744 1.61499C11.0744 1.61499 11.0744 1.61499 11.0652 1.61499C7.80726 1.61499 4.07868 3.52543 3.10962 7.7893C2.0298 12.5516 4.94622 16.5847 7.58576 19.1227C8.56405 20.0641 9.81922 20.5348 11.0744 20.5348C12.3296 20.5348 13.5847 20.0641 14.5538 19.1227C17.1933 16.5847 20.1097 12.5608 19.0299 7.79853ZM11.0744 12.4223C9.46851 12.4223 8.1672 11.121 8.1672 9.51516C8.1672 7.90928 9.46851 6.60797 11.0744 6.60797C12.6803 6.60797 13.9816 7.90928 13.9816 9.51516C13.9816 11.121 12.6803 12.4223 11.0744 12.4223Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342]">Address</h4>
+                      <p class="text-gray-600">
+                        402, Aayush Doctor House, Lal Darwaja,<br />
+                        Station Road, SURAT 395 002 - GUJ INDIA
+                      </p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style="background-color:#032342 ;">
+                    Location
+                  </button>
+                </div>
+              
+                <!-- Email -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- Mail Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6896 3.23022H6.46041C3.69166 3.23022 1.84583 4.6146 1.84583 7.84481V14.3052C1.84583 17.5354 3.69166 18.9198 6.46041 18.9198H15.6896C18.4583 18.9198 20.3042 17.5354 20.3042 14.3052V7.84481C20.3042 4.6146 18.4583 3.23022 15.6896 3.23022ZM16.1233 8.85079L13.2346 11.1581C12.6255 11.6472 11.8502 11.8872 11.075 11.8872C10.2997 11.8872 9.51526 11.6472 8.91537 11.1581L6.02664 8.85079C5.7313 8.61083 5.68516 8.16783 5.91589 7.8725C6.15585 7.57716 6.58962 7.52179 6.88495 7.76175L9.77368 10.069C10.4751 10.632 11.6657 10.632 12.3671 10.069L15.2558 7.76175C15.5511 7.52179 15.9941 7.56793 16.2249 7.8725C16.4648 8.16783 16.4187 8.61083 16.1233 8.85079Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">E-Mail</h4>
+                      <p class="text-gray-600">arvind.dhameliya@ahoo.in</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style=" background-color: #032342;">
+                    Send Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Column: Google Map -->
+          <div class="rounded-3xl overflow-hidden shadow-lg bg-white p-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7307406472604!2d72.83646081493443!3d21.195537985907523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e7a6f824a81%3A0x8c4c4b7c4c4c4b7c!2sDhameliya%20Kidney%20Hospital!5e0!3m2!1sen!2sin!4v1620147647947!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              class="rounded-2xl"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <div class="w-full flex justify-center    ">
+        <img
+          src="assets/images/—Pngtree—creative simple dividing line_5054140 1.png"
+          alt=""
+        />
+      </div>
+
+      <section class="container mx-auto px-4 py-12">
+        <!-- Header -->
+       
+      
+        <!-- Grid Layout -->
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <!-- Left Column: Google Map -->
+          <div class="rounded-3xl overflow-hidden shadow-lg bg-white p-2 order-last lg:order-first">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.7307406472604!2d72.83646081493443!3d21.195537985907523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e7a6f824a81%3A0x8c4c4b7c4c4c4b7c!2sDhameliya%20Kidney%20Hospital!5e0!3m2!1sen!2sin!4v1620147647947!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              class="rounded-2xl"
+            ></iframe>
+          </div>
+      
+          <!-- Right Column: Contact Details -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-[#385182]   text-2xl font-medium">Dhameliya Kidney Hospital</h2>
+              <p class="text-[#6285CA]  font-medium text-3xl font-weight-[500]]">- Adajan</p>
+            </div>
+      
+            <div class="ml-14 ">
+              <h3 class="text-3xl  font-medium  mb-3">Quick Contacts</h3>
+              <p class="text-gray-600  mb-8">
+                Please feel free to contact our friendly staff with <br> any medical enquiry.
+              </p>
+      
+              <!-- Contact Info -->
+              <div class="space-y-6">
+                <!-- Phone -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-[#E8EDF7] flex items-center justify-center flex-shrink-0">
+                      <!-- Phone Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2002 13.8L8.49247 15.5077C8.13247 15.8677 7.56016 15.8677 7.19093 15.517C7.08939 15.4154 6.98785 15.3231 6.88631 15.2216C5.93554 14.2616 5.07708 13.2554 4.31093 12.2031C3.55401 11.1508 2.94477 10.0985 2.5017 9.05542C2.06785 8.00311 1.84631 6.99696 1.84631 6.03696C1.84631 5.40927 1.95708 4.80927 2.17862 4.25542C2.40016 3.69235 2.75093 3.17542 3.24016 2.71388C3.83093 2.13235 4.47708 1.84619 5.16016 1.84619C5.41862 1.84619 5.67708 1.90158 5.90785 2.01235C6.14785 2.12311 6.36016 2.28927 6.52631 2.52927L8.66785 5.54773C8.83401 5.7785 8.95401 5.99081 9.03708 6.19388C9.12016 6.38773 9.16631 6.58158 9.16631 6.75696C9.16631 6.9785 9.1017 7.20004 8.97247 7.41234C8.85247 7.62465 8.67708 7.84619 8.45554 8.06773L7.754 8.79696C7.65247 8.8985 7.60631 9.0185 7.60631 9.16619C7.60631 9.24004 7.61554 9.30465 7.63401 9.3785C7.6617 9.45235 7.68939 9.50773 7.70785 9.56311C7.87401 9.86773 8.16016 10.2647 8.56631 10.7447C8.9817 11.2247 9.42477 11.7139 9.90477 12.2031C9.99708 12.2954 10.0986 12.3877 10.1909 12.48C10.5602 12.84 10.5694 13.4308 10.2002 13.8Z" fill="#385182"/>
+                        <path d="M20.2802 16.92C20.2802 17.1784 20.234 17.4461 20.1417 17.7046C20.114 17.7784 20.0863 17.8523 20.0494 17.9261C19.8925 18.2584 19.6894 18.5723 19.4217 18.8677C18.9694 19.3661 18.4709 19.7261 17.9078 19.9569C17.8986 19.9569 17.8894 19.9661 17.8802 19.9661C17.3355 20.1877 16.7448 20.3077 16.1078 20.3077C15.1663 20.3077 14.1602 20.0861 13.0986 19.6338C12.0371 19.1815 10.9755 18.5723 9.92323 17.8061C9.56323 17.5384 9.20323 17.2707 8.86169 16.9846L11.8802 13.9661C12.1386 14.16 12.3694 14.3077 12.5632 14.4092C12.6094 14.4277 12.6648 14.4553 12.7294 14.483C12.8032 14.5107 12.8771 14.52 12.9602 14.52C13.1171 14.52 13.2371 14.4646 13.3386 14.363L14.0402 13.6707C14.2709 13.44 14.4925 13.2646 14.7048 13.1538C14.9171 13.0246 15.1294 12.96 15.3602 12.96C15.5355 12.96 15.7202 12.9969 15.9232 13.08C16.1263 13.163 16.3386 13.283 16.5694 13.44L19.6248 15.6092C19.8648 15.7753 20.0309 15.9692 20.1325 16.2C20.2248 16.4307 20.2802 16.6615 20.2802 16.92Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">Contact</h4>
+                      <p class="text-gray-600">+91 9913225927</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] w-20 hover:bg-[#2a3d5e]  text-white hover:text-[#032342] px-4 py-2 rounded-full ml-14" style="background-color: #032342;  ">
+                    Call
+                  </button>
+                </div>
+              
+                <!-- Address -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- MapPin Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.0299 7.79853C18.0609 3.53466 14.3415 1.61499 11.0744 1.61499C11.0744 1.61499 11.0744 1.61499 11.0652 1.61499C7.80726 1.61499 4.07868 3.52543 3.10962 7.7893C2.0298 12.5516 4.94622 16.5847 7.58576 19.1227C8.56405 20.0641 9.81922 20.5348 11.0744 20.5348C12.3296 20.5348 13.5847 20.0641 14.5538 19.1227C17.1933 16.5847 20.1097 12.5608 19.0299 7.79853ZM11.0744 12.4223C9.46851 12.4223 8.1672 11.121 8.1672 9.51516C8.1672 7.90928 9.46851 6.60797 11.0744 6.60797C12.6803 6.60797 13.9816 7.90928 13.9816 9.51516C13.9816 11.121 12.6803 12.4223 11.0744 12.4223Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342]">Address</h4>
+                      <p class="text-gray-600">
+                        402, Aayush Doctor House, Lal Darwaja,<br />
+                        Station Road, SURAT 395 002 - GUJ INDIA
+                      </p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style="background-color:#032342 ;">
+                    Location
+                  </button>
+                </div>
+              
+                <!-- Email -->
+                <div>
+                  <div class="flex items-start gap-4 mb-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <!-- Mail Icon -->
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6896 3.23022H6.46041C3.69166 3.23022 1.84583 4.6146 1.84583 7.84481V14.3052C1.84583 17.5354 3.69166 18.9198 6.46041 18.9198H15.6896C18.4583 18.9198 20.3042 17.5354 20.3042 14.3052V7.84481C20.3042 4.6146 18.4583 3.23022 15.6896 3.23022ZM16.1233 8.85079L13.2346 11.1581C12.6255 11.6472 11.8502 11.8872 11.075 11.8872C10.2997 11.8872 9.51526 11.6472 8.91537 11.1581L6.02664 8.85079C5.7313 8.61083 5.68516 8.16783 5.91589 7.8725C6.15585 7.57716 6.58962 7.52179 6.88495 7.76175L9.77368 10.069C10.4751 10.632 11.6657 10.632 12.3671 10.069L15.2558 7.76175C15.5511 7.52179 15.9941 7.56793 16.2249 7.8725C16.4648 8.16783 16.4187 8.61083 16.1233 8.85079Z" fill="#385182"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-medium  text-xl text-[#032342] mb-1">E-Mail</h4>
+                      <p class="text-gray-600">arvind.dhameliya@ahoo.in</p>
+                    </div>
+                  </div>
+                  <button class="bg-[#1a2d4e] hover:bg-[#2a3d5e] text-white  px-4 py-2 rounded-full ml-14" style=" background-color: #032342;">
+                    Send Mail
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="py-20 px-4" style="background-color: #F6F6F6;">
+        <div class="container max-w-[500px] mx-auto">
+          <div class="bg-white rounded-3xl p-12 m-16 shadow-lg">
+            <div class="space-y-8">
+              <p class="text-[#6285CA]  font-medium">H E L P</p>
+              <h2 class="text-4xl font-medium  text-[#032342]">How Can We Help?</h2>
+              <p class="text-gray-500 text-lg">
+                Please feel welcome to contact our friendly reception staff with any general or medical enquiry. Our doctors
+                will receive or return any urgent calls.
+              </p>
+            </div>
+        
+            <form class="space-y-6 mt-10 ">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="bg-gray-50 border-0 h-12 rounded-md px-4 w-full focus:outline-none focus:ring-2 "
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="bg-gray-50 border-0 h-12 rounded-md px-4 w-full focus:outline-none focus:ring-2 "
+                />
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="bg-gray-50 border-0 h-12 rounded-md px-4 w-full focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="bg-gray-50 border-0 h-12 rounded-md px-4 w-full focus:outline-none focus:ring-2 "
+                />
+              </div>
+              <textarea
+                placeholder="Message"
+                class="bg-gray-50 border-0 min-h-[160px] rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 "
+              ></textarea>
+              <button
+                type="submit"
+                class="hover:bg-[#1e3255] text-white px-8 h-12 rounded-3xl flex items-center justify-center transition-colors duration-200 w-60 md:w-auto"
+                style="background-color: #385182;"
+              >
+                Submit Request
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ml-2"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <section class="w-full py-24 flex flex-col items-center justify-center">
+        <div class="container p-10 bg-cover bg-center text-center rounded-[18px] bg-[#385182]" style="background-image: url('assets/images/linenews.png');">
+          <div class="newsletter_content">
+            <h2 class="text-white text-5xl font-medium mb-5">Newsletter</h2>
+            <span class="text-white text-2xl font-medium">Get Smarter About No-Code</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+            </svg>
+            <div class="flex items-center justify-center my-4">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+              <p class="text-[#AFB9CD] text-base mx-2" style="color: #AFB9CD;">
+                The best No-Code tips & tricks, for webflow & Framer developers from <br>experts to beginner. Join our 3k community by subscribing
+              </p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L10.1607 5.83927L16 8L10.1607 10.1607L8 16L5.83927 10.1607L0 8L5.83927 5.83927L8 0Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="flex justify-center mt-4">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                class="text-white text-lg px-3 py-2 rounded-[10px] outline-none border border-[#8f9db8] bg-[#445b89] placeholder:text-white"
+              />
+              <a
+                href="#subscribe"
+                class="subscribe_btn inline-block border border-[#032342] text-[#385182] bg-white rounded-[12px] px-6 py-3 text-lg font-medium transition duration-300 hover:bg-[#6285ca] hover:text-white ml-3"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" class="bg-[#032342] text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="f_left">
+                        <h4 class="text-4xl font-medium mb-5">Dhameliya Kidney Hospital</h4>
+                        <p class="text-lg mb-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim laboriosam eius voluptate ipsam, error fugit praesentium aut modi. Rerum obcaecati deleniti laboriosam nesciunt nisi
+                        </p>
+                        <div class="flex space-x-5">
+                            <i class="ri-facebook-circle-fill text-2xl"></i>
+                            <i class="ri-instagram-fill text-2xl"></i>
+                            <i class="ri-linkedin-box-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Middle Section -->
+                <div class="col-span-1 pr-20">
+                    <div class="mid_footer">
+                        <h5 class="text-2xl font-medium mb-8">Get in Touch</h5>
+                        <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                        <p class="text-lg mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur omnis adipisci</p>
+                        <div class="phone pt-4 flex items-center">
+                            <i class="ri-phone-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            <span class="text-lg">+91 261 2490001</span>
+                        </div>
+                        <div class="flex items-center py-4">
+                            <div class="location">
+                                <i class="ri-map-pin-2-fill bg-white text-[#385182] p-2 rounded-full mr-2"></i>
+                            </div>
+                            <span class="text-lg">402, Aayush Doctor House, Lal Darwaja, Station Road, SURAT 395002-GUJ INDIA</span>
+                        </div>
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Get Direction <i class="ri-arrow-right-line"></i></a>
+                        <br />
+                        <a href="#" class="text-white text-lg inline-block py-2 pr-4">Our Branches <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Right Section -->
+                <div class="col-span-1">
+                    <div class="footerRight">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Medical Services</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="m_services space-y-3">
+                                    <li class="text-lg icon-list">Kidney Stone</li>
+                                    <li class="text-lg icon-list">Prostate</li>
+                                    <li class="text-lg icon-list">Uro Oncology</li>
+                                    <li class="text-lg icon-list">Paediatric Urology</li>
+                                    <li class="text-lg icon-list">Female Urology</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-1">
+                                <h6 class="text-2xl font-medium mb-8">Quick Links</h6>
+                                <hr class="border-[#ffffff50] my-4"> <!-- Lightened line -->
+                                <ul class="q_services space-y-3">
+                                    <li class="text-lg icon-list">Home</li>
+                                    <li class="text-lg icon-list">About Us</li>
+                                    <li class="text-lg icon-list">Medical Services</li>
+                                    <li class="text-lg icon-list">Testimonials</li>
+                                    <li class="text-lg icon-list">Contact Us</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Line -->
+            <div class="border-t border-white my-10"></div>
+    
+            <!-- Copyright -->
+            <p class="text-center text-xl">Non Copyrighted @ 2022 Designed and uploaded by Dhameliya Kidney Hospital</p>
+        </div>
+    </footer>
